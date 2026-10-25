@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T22:00:17+08:00",
+  "title": "Design System: SunLicious",
+  "extensions": {
+    "colorMeta": {
+      "sun-green": {
+        "role": "primary",
+        "displayName": "Brand Green",
+        "canonical": "#1f8a3b",
+        "tonalRamp": [
+          "oklch(15% 0.09 150)",
+          "oklch(27% 0.1 150)",
+          "oklch(39% 0.11 150)",
+          "oklch(51% 0.12 150)",
+          "oklch(63% 0.13 150)",
+          "oklch(75% 0.13 150)",
+          "oklch(85% 0.11 150)",
+          "oklch(95% 0.07 150)"
+        ]
+      },
+      "sun-pine": {
+        "role": "primary",
+        "displayName": "Pine Ink",
+        "canonical": "#0f5a2b",
+        "tonalRamp": [
+          "oklch(15% 0.06 152)",
+          "oklch(27% 0.075 152)",
+          "oklch(39% 0.085 152)",
+          "oklch(51% 0.09 152)",
+          "oklch(63% 0.095 152)",
+          "oklch(75% 0.09 152)",
+          "oklch(85% 0.075 152)",
+          "oklch(95% 0.05 152)"
+        ]
+      },
+      "sun-orange": {
+        "role": "secondary",
+        "displayName": "Mango Orange",
+        "canonical": "#f6921e",
+        "tonalRamp": [
+          "oklch(15% 0.08 55)",
+          "oklch(27% 0.1 55)",
+          "oklch(39% 0.125 55)",
+          "oklch(51% 0.145 55)",
+          "oklch(63% 0.16 55)",
+          "oklch(75% 0.165 55)",
+          "oklch(85% 0.15 55)",
+          "oklch(95% 0.1 55)"
+        ]
+      },
+      "sun-blue": {
+        "role": "secondary",
+        "displayName": "Sky Blue",
+        "canonical": "#229fd6",
+        "tonalRamp": [
+          "oklch(15% 0.06 230)",
+          "oklch(27% 0.075 230)",
+          "oklch(39% 0.09 230)",
+          "oklch(51% 0.105 230)",
+          "oklch(63% 0.115 230)",
+          "oklch(75% 0.115 230)",
+          "oklch(85% 0.1 230)",
+          "oklch(95% 0.06 230)"
+        ]
+      },
+      "sun-leaf": {
+        "role": "tertiary",
+        "displayName": "Leaf Green",
+        "canonical": "#45b54e",
+        "tonalRamp": [
+          "oklch(15% 0.07 145)",
+          "oklch(27% 0.09 145)",
+          "oklch(39% 0.11 145)",
+          "oklch(51% 0.13 145)",
+          "oklch(63% 0.15 145)",
+          "oklch(75% 0.155 145)",
+          "oklch(85% 0.14 145)",
+          "oklch(95% 0.09 145)"
+        ]
+      },
+      "sun-leaf-deep": {
+        "role": "tertiary",
+        "displayName": "Deep Leaf",
+        "canonical": "#2e8b3a",
+        "tonalRamp": [
+          "oklch(15% 0.07 148)",
+          "oklch(27% 0.085 148)",
+          "oklch(39% 0.1 148)",
+          "oklch(51% 0.11 148)",
+          "oklch(63% 0.115 148)",
+          "oklch(75% 0.11 148)",
+          "oklch(85% 0.095 148)",
+          "oklch(95% 0.06 148)"
+        ]
+      },
+      "sun-juice": {
+        "role": "tertiary",
+        "displayName": "Juice Gold",
+        "canonical": "#ffcf33",
+        "tonalRamp": [
+          "oklch(15% 0.07 85)",
+          "oklch(27% 0.09 85)",
+          "oklch(39% 0.115 85)",
+          "oklch(51% 0.14 85)",
+          "oklch(63% 0.16 85)",
+          "oklch(75% 0.17 85)",
+          "oklch(85% 0.155 85)",
+          "oklch(95% 0.11 85)"
+        ]
+      },
+      "sun-amber": {
+        "role": "tertiary",
+        "displayName": "Pineapple Amber",
+        "canonical": "#f7a81c",
+        "tonalRamp": [
+          "oklch(15% 0.07 70)",
+          "oklch(27% 0.09 70)",
+          "oklch(39% 0.11 70)",
+          "oklch(51% 0.13 70)",
+          "oklch(63% 0.15 70)",
+          "oklch(75% 0.155 70)",
+          "oklch(85% 0.14 70)",
+          "oklch(95% 0.1 70)"
+        ]
+      },
+      "sun-gold": {
+        "role": "tertiary",
+        "displayName": "Pineapple Gold",
+        "canonical": "#e9a83e",
+        "tonalRamp": [
+          "oklch(15% 0.06 75)",
+          "oklch(27% 0.075 75)",
+          "oklch(39% 0.09 75)",
+          "oklch(51% 0.105 75)",
+          "oklch(63% 0.12 75)",
+          "oklch(75% 0.125 75)",
+          "oklch(85% 0.115 75)",
+          "oklch(95% 0.08 75)"
+        ]
+      },
+      "sun-lime": {
+        "role": "tertiary",
+        "displayName": "Lime Wash",
+        "canonical": "#c9dc3f",
+        "tonalRamp": [
+          "oklch(15% 0.06 115)",
+          "oklch(27% 0.08 115)",
+          "oklch(39% 0.1 115)",
+          "oklch(51% 0.12 115)",
+          "oklch(63% 0.14 115)",
+          "oklch(75% 0.145 115)",
+          "oklch(85% 0.13 115)",
+          "oklch(95% 0.09 115)"
+        ]
+      },
+      "sun-bark": {
+        "role": "tertiary",
+        "displayName": "Bark Brown",
+        "canonical": "#8a5a23",
+        "tonalRamp": [
+          "oklch(15% 0.04 65)",
+          "oklch(27% 0.05 65)",
+          "oklch(39% 0.06 65)",
+          "oklch(51% 0.075 65)",
+          "oklch(63% 0.085 65)",
+          "oklch(75% 0.09 65)",
+          "oklch(85% 0.08 65)",
+          "oklch(95% 0.05 65)"
+        ]
+      },
+      "sun-yellow": {
+        "role": "neutral",
+        "displayName": "Sun Yellow",
+        "canonical": "#f2e62b",
+        "tonalRamp": [
+          "oklch(15% 0.05 102)",
+          "oklch(27% 0.07 102)",
+          "oklch(39% 0.1 102)",
+          "oklch(51% 0.13 102)",
+          "oklch(63% 0.16 102)",
+          "oklch(75% 0.18 102)",
+          "oklch(85% 0.18 102)",
+          "oklch(95% 0.15 102)"
+        ]
+      },
+      "sun-glow": {
+        "role": "neutral",
+        "displayName": "Pale Sun Halo",
+        "canonical": "#fbf6b4",
+        "tonalRamp": [
+          "oklch(15% 0.03 102)",
+          "oklch(27% 0.04 102)",
+          "oklch(39% 0.05 102)",
+          "oklch(51% 0.065 102)",
+          "oklch(63% 0.08 102)",
+          "oklch(75% 0.09 102)",
+          "oklch(85% 0.095 102)",
+          "oklch(95% 0.09 102)"
+        ]
+      },
+      "sun-cream": {
+        "role": "neutral",
+        "displayName": "Sun Cream",
+        "canonical": "#fff9e3",
+        "tonalRamp": [
+          "oklch(15% 0.02 95)",
+          "oklch(27% 0.025 95)",
+          "oklch(39% 0.03 95)",
+          "oklch(51% 0.035 95)",
+          "oklch(63% 0.04 95)",
+          "oklch(75% 0.045 95)",
+          "oklch(85% 0.05 95)",
+          "oklch(95% 0.045 95)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display — Baloo 2",
+        "purpose": "Hero headline words only; each word carries its own color and tilt, ringed by hand-drawn sparks and a smile arc."
+      },
+      "script": {
+        "displayName": "Script — Caveat",
+        "purpose": "Hand-lettered taglines, stamps and asides; always tilted (-2° to -8°), may carry a squiggle underline and heart."
+      },
+      "body": {
+        "displayName": "UI — Nunito",
+        "purpose": "Nav links, buttons, captions; the page has no long-form body text yet."
+      },
+      "label": {
+        "displayName": "Label — Nunito 800",
+        "purpose": "Badge captions and stamp sublabels; uppercase content, family-tinted text shadows on color, cqw-sized over the artwork."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cta-lift-lg",
+        "value": "0 20px 25px -5px rgba(15,90,43,0.30), 0 8px 10px -6px rgba(15,90,43,0.30)",
+        "purpose": "Hero pill CTA (shadow-xl tinted sun-pine/30); the mobile menu panel uses the same geometry at 0.40."
+      },
+      {
+        "name": "cta-lift-sm",
+        "value": "0 10px 15px -3px rgba(15,90,43,0.30), 0 4px 6px -4px rgba(15,90,43,0.30)",
+        "purpose": "Nav pill CTA — compact pine-tinted lift (shadow-lg)."
+      },
+      {
+        "name": "badge-lift-leaf",
+        "value": "0 10px 15px -3px rgba(46,139,58,0.30), 0 4px 6px -4px rgba(46,139,58,0.30)",
+        "purpose": "Leaf-green blob badge; geometry shared by all blob tints."
+      },
+      {
+        "name": "badge-lift-orange",
+        "value": "0 10px 15px -3px rgba(138,74,8,0.30), 0 4px 6px -4px rgba(138,74,8,0.30)",
+        "purpose": "Mango-orange blob badge."
+      },
+      {
+        "name": "badge-lift-blue",
+        "value": "0 10px 15px -3px rgba(12,90,128,0.30), 0 4px 6px -4px rgba(12,90,128,0.30)",
+        "purpose": "Sky-blue blob badge."
+      },
+      {
+        "name": "stamp-lift",
+        "value": "0 4px 6px -1px rgba(15,90,43,0.30), 0 2px 4px -2px rgba(15,90,43,0.30)",
+        "purpose": "Artwork claim-stamp circle (shadow-md tinted sun-pine/30)."
+      },
+      {
+        "name": "caption-shadow",
+        "value": "0 1px 1px rgba(15,60,25,0.35)",
+        "purpose": "White 13px captions on colored blobs; orange variant rgba(90,40,0,0.35), blue variant rgba(6,50,75,0.35)."
+      },
+      {
+        "name": "artwork-drop",
+        "value": "drop-shadow(0 20px 13px rgba(0,0,0,0.03)) drop-shadow(0 8px 13px rgba(0,0,0,0.06))",
+        "purpose": "Hero scene SVG only — the one near-neutral shadow in the build (Tailwind drop-shadow-xl)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "float",
+        "value": "float 6s ease-in-out infinite; keyframes translate 0 → 0 → -12px",
+        "purpose": "Idle drift for the artwork slot (#hero-artwork)."
+      },
+      {
+        "name": "bob",
+        "value": "float 4.5s ease-in-out infinite; keyframes translate 0 → 0 → -12px",
+        "purpose": "Idle bobbing for scene elements (juice splash, cut pineapple half)."
+      },
+      {
+        "name": "rock",
+        "value": "rock 5s ease-in-out infinite; keyframes rotate -2.5deg → 3deg; transform-origin 50% 75% with transform-box: fill-box",
+        "purpose": "Gentle rocking for the mascot pineapple."
+      },
+      {
+        "name": "rise",
+        "value": "rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; from opacity 0 / translate 0 26px",
+        "purpose": "Entrance for hero text blocks, staggered by inline animation-delay 0.12–0.5s; animates the translate property so it never clobbers standalone rotate utilities."
+      },
+      {
+        "name": "pop",
+        "value": "pop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; from opacity 0 / scale 0.94",
+        "purpose": "Entrance for the artwork column."
+      },
+      {
+        "name": "hover-lift",
+        "value": "translateY(-2px), 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "All pill CTAs and the logo badge rise on hover while their fill deepens a step."
+      },
+      {
+        "name": "badge-straighten",
+        "value": "rotate(0deg) scale(1.05), 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Blob badges straighten to level and grow on hover — level is the interaction response."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Hero pill CTA — Brand Green fill that deepens to Pine Ink and lifts 2px on hover.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Dapatkan Sekarang <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 12h15\"/><path d=\"M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:12px;background:var(--color-sun-green,#1f8a3b);color:#ffffff;border:none;border-radius:9999px;padding:16px 32px;font-family:var(--font-sans,'Nunito',system-ui,sans-serif);font-size:18px;font-weight:800;box-shadow:0 20px 25px -5px rgba(15,90,43,.3),0 8px 10px -6px rgba(15,90,43,.3);cursor:pointer;transition:background-color .15s cubic-bezier(.4,0,.2,1),transform .15s cubic-bezier(.4,0,.2,1),box-shadow .15s cubic-bezier(.4,0,.2,1)}.ds-btn-primary:hover{background:var(--color-sun-pine,#0f5a2b);transform:translateY(-2px)}.ds-btn-primary:active{transform:translateY(0)}.ds-btn-primary:focus-visible{outline:2px solid var(--color-sun-pine,#0f5a2b);outline-offset:2px}"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "button",
+      "refersTo": "button-nav",
+      "description": "Compact header pill in Pine Ink; deepens to the one-off hover value #0c4b23 and lifts on hover.",
+      "html": "<button class=\"ds-btn-nav\" type=\"button\">Beli Sekarang <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 12h15\"/><path d=\"M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-nav{display:inline-flex;align-items:center;gap:10px;background:var(--color-sun-pine,#0f5a2b);color:#ffffff;border:none;border-radius:9999px;padding:12px 24px;font-family:var(--font-sans,'Nunito',system-ui,sans-serif);font-size:14px;font-weight:800;box-shadow:0 10px 15px -3px rgba(15,90,43,.3),0 4px 6px -4px rgba(15,90,43,.3);cursor:pointer;transition:background-color .15s cubic-bezier(.4,0,.2,1),transform .15s cubic-bezier(.4,0,.2,1)}.ds-btn-nav:hover{background:#0c4b23;transform:translateY(-2px)}.ds-btn-nav:focus-visible{outline:2px solid var(--color-sun-pine,#0f5a2b);outline-offset:2px}.ds-btn-nav svg{width:16px;height:16px}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "44px transparent circle for cart/menu with Pine Ink stroke icons; white/50 coin on hover.",
+      "html": "<button class=\"ds-btn-icon\" type=\"button\" aria-label=\"Troli belian\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"24\" height=\"24\" aria-hidden=\"true\"><circle cx=\"9\" cy=\"20\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"17\" cy=\"20\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M2.5 3.5h2.2l2.5 11.2a1.6 1.6 0 0 0 1.6 1.3h7.9a1.6 1.6 0 0 0 1.6-1.2l1.9-7.3H6.1\"/></svg></button>",
+      "css": ".ds-btn-icon{display:grid;place-items:center;width:44px;height:44px;border:none;border-radius:9999px;background:transparent;color:var(--color-sun-pine,#0f5a2b);cursor:pointer;transition:background-color .15s cubic-bezier(.4,0,.2,1)}.ds-btn-icon:hover{background:rgba(255,255,255,.5)}.ds-btn-icon:focus-visible{outline:2px solid var(--color-sun-pine,#0f5a2b);outline-offset:2px}"
+    },
+    {
+      "name": "Benefit Blob Badge",
+      "kind": "chip",
+      "refersTo": "badge-blob",
+      "description": "Organic blob claim chip; three color variants (leaf/orange/blue) each with a family-tinted shadow; straightens and grows on hover.",
+      "html": "<div class=\"ds-badge-blob\"><span class=\"ds-badge-blob-icon\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M5.5 18.5 C5.5 10.5 11.5 4.5 20 4.5 C20 13 14 19 5.5 18.5 Z\"/><path d=\"M4 20.5 C7 15.5 11 11.5 16.5 8.5\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg></span><span class=\"ds-badge-blob-label\">100%<br>Buah Nanas<br>Semula Jadi</span></div>",
+      "css": ".ds-badge-blob{display:flex;flex-direction:column;align-items:center;width:152px;padding:16px 16px 20px;text-align:center;background:var(--color-sun-leaf,#45b54e);color:#ffffff;border-radius:53% 47% 56% 44% / 48% 55% 45% 52%;transform:rotate(-3deg);box-shadow:0 10px 15px -3px rgba(46,139,58,.3),0 4px 6px -4px rgba(46,139,58,.3);font-family:var(--font-sans,'Nunito',system-ui,sans-serif);cursor:pointer;transition:transform .3s cubic-bezier(.4,0,.2,1)}.ds-badge-blob:hover{transform:rotate(0deg) scale(1.05)}.ds-badge-blob--orange{background:var(--color-sun-orange,#f6921e);border-radius:46% 54% 44% 56% / 55% 46% 54% 45%;box-shadow:0 10px 15px -3px rgba(138,74,8,.3),0 4px 6px -4px rgba(138,74,8,.3)}.ds-badge-blob--blue{background:var(--color-sun-blue,#229fd6);border-radius:56% 44% 50% 50% / 44% 52% 48% 56%;box-shadow:0 10px 15px -3px rgba(12,90,128,.3),0 4px 6px -4px rgba(12,90,128,.3)}.ds-badge-blob-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:9999px;background:#ffffff;color:var(--color-sun-leaf-deep,#2e8b3a)}.ds-badge-blob--orange .ds-badge-blob-icon{color:var(--color-sun-orange,#f6921e)}.ds-badge-blob--blue .ds-badge-blob-icon{color:var(--color-sun-blue,#229fd6)}.ds-badge-blob-label{margin-top:8px;font-size:13px;font-weight:800;line-height:1.375;text-shadow:0 1px 1px rgba(15,60,25,.35)}.ds-badge-blob--orange .ds-badge-blob-label{text-shadow:0 1px 1px rgba(90,40,0,.35)}.ds-badge-blob--blue .ds-badge-blob-label{text-shadow:0 1px 1px rgba(6,50,75,.35)}"
+    },
+    {
+      "name": "Nav Links",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Inline desktop nav — Pine Ink at 80%, full on hover; active page carries a 28x3px rounded underline bar.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navigasi utama\"><a class=\"ds-nav-link is-active\" href=\"#home\" aria-current=\"page\">Home</a><a class=\"ds-nav-link\" href=\"#produk\">Produk</a><a class=\"ds-nav-link\" href=\"#kebaikan\">Kebaikan</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:36px}.ds-nav-link{position:relative;font-family:var(--font-sans,'Nunito',system-ui,sans-serif);font-size:15px;font-weight:700;color:rgba(15,90,43,.8);text-decoration:none;transition:color .15s cubic-bezier(.4,0,.2,1)}.ds-nav-link:hover{color:var(--color-sun-pine,#0f5a2b)}.ds-nav-link.is-active{font-weight:800;color:var(--color-sun-pine,#0f5a2b)}.ds-nav-link.is-active::after{content:\"\";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);width:28px;height:3px;border-radius:9999px;background:var(--color-sun-pine,#0f5a2b)}.ds-nav-link:focus-visible{outline:2px solid var(--color-sun-pine,#0f5a2b);outline-offset:2px;border-radius:4px}"
+    },
+    {
+      "name": "Mobile Menu Panel",
+      "kind": "nav",
+      "refersTo": "menu-panel",
+      "description": "Pine Ink dropdown panel with rounded items and an inverted Juice Gold CTA; closes on link click and Escape.",
+      "html": "<div class=\"ds-menu-panel\"><nav class=\"ds-menu-nav\"><a class=\"ds-menu-item is-active\" href=\"#home\" aria-current=\"page\">Home</a><a class=\"ds-menu-item\" href=\"#produk\">Produk</a><a class=\"ds-menu-item\" href=\"#tentang\">Tentang Kami</a><a class=\"ds-menu-cta\" href=\"#beli\">Beli Sekarang <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 12h15\"/><path d=\"M13 6l6 6-6 6\"/></svg></a></nav></div>",
+      "css": ".ds-menu-panel{max-width:320px;border-radius:16px;background:var(--color-sun-pine,#0f5a2b);padding:12px;box-shadow:0 20px 25px -5px rgba(15,90,43,.4),0 8px 10px -6px rgba(15,90,43,.4);font-family:var(--font-sans,'Nunito',system-ui,sans-serif)}.ds-menu-nav{display:flex;flex-direction:column}.ds-menu-item{display:block;border-radius:12px;padding:12px 16px;color:rgba(255,255,255,.85);font-size:16px;font-weight:700;text-decoration:none;transition:background-color .15s cubic-bezier(.4,0,.2,1)}.ds-menu-item:hover{background:rgba(255,255,255,.1)}.ds-menu-item.is-active{color:#ffffff;font-weight:800}.ds-menu-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;border-radius:9999px;background:var(--color-sun-juice,#ffcf33);color:var(--color-sun-pine,#0f5a2b);padding:12px 24px;font-size:16px;font-weight:800;text-decoration:none}.ds-menu-item:focus-visible,.ds-menu-cta:focus-visible{outline:2px solid var(--color-sun-cream,#fff9e3);outline-offset:2px}"
+    },
+    {
+      "name": "Handwritten Stamp",
+      "kind": "custom",
+      "refersTo": "stamp-note",
+      "description": "Signature Caveat note in Pine Ink, tilted -8°, with red heart and hand-drawn squiggle underline.",
+      "html": "<div class=\"ds-stamp-note\">Rasa Nanas<br>Yang Sebenar! <svg class=\"ds-stamp-heart\" viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M12 20.5 C6 15.5 3 12 3 8.4 C3 5.7 5.2 4 7.4 4 C9.2 4 10.8 5 12 6.6 C13.2 5 14.8 4 16.6 4 C18.8 4 21 5.7 21 8.4 C21 12 18 15.5 12 20.5 Z\"/></svg><svg class=\"ds-stamp-underline\" viewBox=\"0 0 120 14\" width=\"96\" height=\"12\" aria-hidden=\"true\"><path d=\"M6 8 C42 2 80 11 114 5\" fill=\"none\" stroke=\"#0f5a2b\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg></div>",
+      "css": ".ds-stamp-note{width:max-content;font-family:var(--font-hand,'Caveat','Segoe Script',cursive);font-weight:700;font-size:32px;line-height:.95;color:var(--color-sun-pine,#0f5a2b);transform:rotate(-8deg);text-align:right}.ds-stamp-heart{color:#e23b3b}.ds-stamp-underline{display:block;margin-left:auto;margin-top:4px}"
+    },
+    {
+      "name": "Preservative Note Pill",
+      "kind": "chip",
+      "refersTo": "note-pill",
+      "description": "Sun Cream pill with Caveat lettering for the no-preservatives claim; sits over the artwork.",
+      "html": "<p class=\"ds-note-pill\">Tanpa Pengawet • Tanpa Perisa Tiruan</p>",
+      "css": ".ds-note-pill{display:inline-block;width:max-content;border-radius:9999px;background:rgba(255,249,227,.9);color:var(--color-sun-pine,#0f5a2b);padding:5px 18px;font-family:var(--font-hand,'Caveat','Segoe Script',cursive);font-weight:700;font-size:24px;line-height:1.1;white-space:nowrap}"
+    },
+    {
+      "name": "Claim Stamp Circle",
+      "kind": "custom",
+      "refersTo": "stamp-claim",
+      "description": "Brand Green circle with dashed Sun Cream inner ring; in situ sized 8.6cqw against the #hero-artwork container so it tracks the artwork.",
+      "html": "<div class=\"ds-stamp-claim\"><div class=\"ds-stamp-claim-inner\"><div><p class=\"ds-stamp-claim-value\">100%</p><p class=\"ds-stamp-claim-line\">BUAH NANAS</p><p class=\"ds-stamp-claim-line\">SEMULA JADI</p></div></div></div>",
+      "css": ".ds-stamp-claim{display:grid;place-items:center;width:72px;height:72px;border-radius:9999px;background:var(--color-sun-green,#1f8a3b);box-shadow:0 4px 6px -1px rgba(15,90,43,.3),0 2px 4px -2px rgba(15,90,43,.3);color:var(--color-sun-cream,#fff9e3);font-family:var(--font-sans,'Nunito',system-ui,sans-serif)}.ds-stamp-claim-inner{display:grid;place-items:center;width:58px;height:58px;border-radius:9999px;border:1px dashed rgba(255,249,227,.8);text-align:center;line-height:1}.ds-stamp-claim-value{font-family:var(--font-display,'Baloo 2',sans-serif);font-weight:800;font-size:17px}.ds-stamp-claim-line{font-size:8.5px;font-weight:800;letter-spacing:.025em;margin-top:2px}"
+    },
+    {
+      "name": "Logo Badge (brand-asset slot)",
+      "kind": "custom",
+      "refersTo": "logo-badge",
+      "description": "Self-contained logo lockup — green rounded field, sun-ray mark, Baloo 2 wordmark, caps ribbon; tilted -3°, lifts on hover. Swappable for the real logo file.",
+      "html": "<a class=\"ds-logo-badge\" href=\"#home\" aria-label=\"SunLicious — laman utama\"><svg width=\"118\" height=\"72\" viewBox=\"0 0 118 72\" role=\"img\" aria-label=\"SunLicious — Minuman Pilihan Malaysia\"><g transform=\"rotate(-3 59 30)\"><rect x=\"14\" y=\"4\" width=\"90\" height=\"52\" rx=\"17\" fill=\"#1f8a3b\"/><rect x=\"14\" y=\"4\" width=\"90\" height=\"52\" rx=\"17\" fill=\"none\" stroke=\"#0f5a2b\" stroke-width=\"2.5\"/><g stroke=\"#ffcf33\" stroke-width=\"2.6\" stroke-linecap=\"round\"><path d=\"M59 2 v5\"/><path d=\"M50 4 l1.8 4.6\"/><path d=\"M68 4 l-1.8 4.6\"/></g><text x=\"59\" y=\"37\" text-anchor=\"middle\" style=\"font-family:var(--font-display,'Baloo 2',sans-serif);font-weight:800;paint-order:stroke;stroke:#0f5a2b\" font-size=\"21\" fill=\"#ffcf33\">SunLicious</text><rect x=\"24\" y=\"44\" width=\"70\" height=\"9\" rx=\"4.5\" fill=\"#ffcf33\"/><text x=\"59\" y=\"51\" text-anchor=\"middle\" style=\"font-family:var(--font-sans,'Nunito',sans-serif);font-weight:800\" font-size=\"5.4\" fill=\"#0f5a2b\">MINUMAN PILIHAN MALAYSIA</text></g></svg></a>",
+      "css": ".ds-logo-badge{display:inline-block;transition:transform .15s cubic-bezier(.4,0,.2,1)}.ds-logo-badge:hover{transform:translateY(-2px)}.ds-logo-badge:focus-visible{outline:2px solid var(--color-sun-pine,#0f5a2b);outline-offset:2px;border-radius:8px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sun-Drenched Fruit-Stand Poster",
+    "overview": "This is a drawn Malaysian fruit-stand poster, not a product-hero template: the illustrated key-visual IS the hero, and type and fruit share one cartoon world. There is no photo, no gray, no centered-product-with-floating-cards layout. Instead the page is a luminous sun-yellow ground lit from the top-left (28% 18%), fringed with tropical leaves and lime-wash brush strokes, with a hand-built vector scene — bottle on a wooden board, whole and cut pineapples, juice splash, sunglasses mascot — holding the right 55% of the stage.\n\nThe voice is loud, warm, and hand-applied. Display type shouts in rounded Baloo 2 extrabold, each word on its own tilt and in its own color; Caveat hand-lettering adds the asides a crate label would have; Nunito keeps claims and chrome legible. Nothing hero-scale sits perfectly level — hovering a badge straightens it like a sticker being pressed down. Density is poster-like: one richly illustrated scene surrounded by generous yellow air, all copy stacked in a single confident column.\n\nDepth is layered flatness. Five stacked layers (ground, background leaves, foreground strokes, artwork slot, HTML text) do the atmospheric work — background leaves blur, foreground strokes stay crisp — while shadows are reserved for lift and dyed with their element's own hue rather than neutral black. The system ships zero raster assets: every visual is inline SVG inside two declared swappable slots (the hero artwork and the logo badge), so real photography and the final logo can arrive later without touching copy.",
+    "keyCharacteristics": [
+      "Sun-yellow radial ground (light at 28% 18%), framed by leaves and lime-wash strokes at the bottom corners",
+      "Five-layer composition: ground / decor-bg leaves / decor-fg strokes / artwork slot / HTML text overlay",
+      "Three-family stack: Baloo 2 display, Caveat hand-lettering, Nunito UI",
+      "Hand-applied tilt on display and script elements (-8° to +1°); hover straightens",
+      "Hue-tinted shadows (sun-pine, burnt orange, deep sea) — never neutral black in chrome",
+      "Zero raster assets; artwork and logo are declared swappable slots",
+      "Idle motion loops (float 6s / bob 4.5s / rock 5s) keep the poster breathing; prefers-reduced-motion collapses all of it",
+      "Green is the action color: CTAs are sun-green or sun-pine pills, never yellow-on-yellow"
+    ],
+    "rules": [
+      {
+        "name": "The No-Gray Rule",
+        "body": "UI chrome never ships gray or black — no gray text, no neutral shadows. The darkest ink is Pine Ink (#0f5a2b); the lightest is Sun Cream (#fff9e3). Near-black exists only inside the artwork, for drawn pupils and sunglasses.",
+        "section": "colors"
+      },
+      {
+        "name": "The Green-Is-Action Rule",
+        "body": "Interactive color is Brand Green or Pine Ink on the yellow ground; yellow never hosts a yellow button, and Sky Blue never becomes a button at all.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Headline Rule",
+        "body": "Display type speaks in exactly two colors on the yellow ground — Brand Green and Mango Orange. Every other word of UI text is Pine Ink, White, or Sun Cream.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hand-Tilt Rule",
+        "body": "Display and script elements always carry a small rotation (-8° to +1°). Level is reserved for interaction (badges straighten to 0° on hover) and utilitarian chrome (nav, buttons).",
+        "section": "typography"
+      },
+      {
+        "name": "The Artwork-Majority Rule",
+        "body": "The illustrated scene always takes the larger share of the stage (55% vs 45%); text never out-sizes the poster.",
+        "section": "layout"
+      },
+      {
+        "name": "The Five-Layer Rule",
+        "body": "Every hero surface composes bottom-to-top as: ground (radial gradient) → decor-bg (individually positioned, blurred leaf SVGs) → decor-fg (lime wash + brush strokes) → artwork (#hero-artwork, one single swappable slot) → text (all copy as HTML, z-10). Artwork swaps never touch copy.",
+        "section": "layout"
+      },
+      {
+        "name": "The Tinted-Shadow Rule",
+        "body": "Every UI shadow is dyed with its element's hue family — sun-pine under green, burnt orange under orange, deep sea under blue. Neutral black/gray shadows are artwork-only.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Blob-or-Pill Rule",
+        "body": "Chrome corners are 9999px, an organic blob, or 12–16px rounding — nothing sharper ships in UI. The logo's rounded rectangle (rx 17 on 90×52) lives in the same family.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep every word of copy as HTML in the text layer; the artwork slot carries zero copy (The Five-Layer Rule).",
+      "Do put new surfaces on the ground recipe: radial-gradient(120% 90% at 28% 18%, #fdf9c8 0%, #f9ef6e 38%, #f2e62b 72%, #e9d81c 100%) — never flat #f2e62b.",
+      "Do size anything overlaid on the artwork in cqw against #hero-artwork, and recalibrate the percentage anchors in the same change that swaps in a PNG.",
+      "Do tint each element's shadow with its own hue family (The Tinted-Shadow Rule).",
+      "Do keep the idle loops on scene elements (float 6s, bob 4.5s, rock 5s — all ease-in-out) and collapse every animation and transition to 0.01ms under prefers-reduced-motion, with scroll-behavior: auto.",
+      "Do reuse the three blob silhouettes (blob-a/b/c) with family-tinted shadows for any new claim chip."
+    ],
+    "donts": [
+      "Don't ship gray or black in UI chrome — no gray text, no neutral shadows; ink is Pine Ink (#0f5a2b), light is Sun Cream (#fff9e3) (The No-Gray Rule).",
+      "Don't add raster assets casually — the shipping page references zero rasters; when one arrives (PNG key-visual, real logo), it carries its provenance per the direction contract's finish rule.",
+      "Don't typeset display or script elements perfectly level — they carry -8° to +1° (The Hand-Tilt Rule); level is for hover correction and nav chrome.",
+      "Don't split the artwork slot into multiple images or bake copy into it — it is one swappable container (The Five-Layer Rule).",
+      "Don't promote scene-internal illustration colors (wood browns, flesh creams, label ink #6b4a12, heart red #e23b3b) to UI tokens — they ship inside the artwork slot and swap with it.",
+      "Don't use Sky Blue for anything but the badge accent, and never yellow-on-yellow for actions (The Green-Is-Action Rule)."
+    ]
+  }
+}

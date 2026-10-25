@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-sun.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2e62b" />
+    <meta
+      name="description"
+      content="Galeri produk Rasa Suria — rangkaian jus buah tropika 100% semula jadi dalam botol 500ml."
+    />
+    <title>Galeri Produk - SunLicious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-sun-yellow font-sans text-sun-pine antialiased">
+    <!-- Shared defs: leaf shape + soft blur, same set as index.html -->
+    <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="leaf-shape">
+          <path d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z" />
+          <path
+            d="M0 -12 C-1 -58 0 -100 2 -138"
+            fill="none"
+            stroke="rgba(15,90,43,.25)"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </g>
+      </defs>
+    </svg>
+
+    <!-- Header/topnav is rendered by src/nav.ts into this slot -->
+    <header id="site-header"></header>
+
+    <main>
+      <section
+        class="relative overflow-hidden pb-28 pt-32 sm:pb-36 sm:pt-36"
+        aria-labelledby="galeri-title"
+      >
+        <!-- LAYER ground -->
+        <div
+          class="absolute inset-0"
+          style="
+            background: radial-gradient(
+              120% 90% at 28% 8%,
+              #fdf9c8 0%,
+              #f9ef6e 38%,
+              #f2e62b 72%,
+              #e9d81c 100%
+            );
+          "
+          aria-hidden="true"
+        ></div>
+
+        <!-- LAYER decor-bg: leaves + sparks, same set as index.html -->
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute -top-3 left-[6%] w-16 rotate-[38deg] opacity-90 blur-[1.5px]"
+          >
+            <use href="#leaf-shape" fill="#2e8b3a" />
+          </svg>
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute top-14 left-[13%] w-12 rotate-[64deg] opacity-80 blur-[1.5px]"
+          >
+            <use href="#leaf-shape" fill="#45b54e" />
+          </svg>
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute top-[20%] -left-8 w-24 rotate-[78deg] opacity-90"
+          >
+            <use href="#leaf-shape" fill="#3aa848" />
+          </svg>
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute -top-4 right-[4%] w-14 rotate-[145deg] opacity-80 blur-[1.5px]"
+          >
+            <use href="#leaf-shape" fill="#2e8b3a" />
+          </svg>
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute top-[45%] -right-10 w-32 rotate-[105deg] opacity-70 blur-[2px]"
+          >
+            <use href="#leaf-shape" fill="#3aa848" />
+          </svg>
+          <svg
+            viewBox="-22 -160 44 168"
+            class="absolute bottom-24 left-[3%] w-24 -rotate-[24deg] opacity-95"
+          >
+            <use href="#leaf-shape" fill="#2e8b3a" />
+          </svg>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="mb-12 max-w-2xl sm:mb-16">
+            <h2
+              id="galeri-title"
+              class="text-balance font-display text-[clamp(2.75rem,5vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.02em] text-sun-green"
+            >
+              Galeri Produk
+            </h2>
+            <p class="mt-5 text-[16px] font-semibold leading-relaxed text-sun-pine/85 sm:text-lg">
+              Rangkaian lengkap jus buah tropika kami — diperah daripada buah matang pilihan, tanpa
+              gula tambahan, perisa tiruan atau pengawet.
+            </p>
+          </div>
+
+          <!-- Cards are rendered by src/produk.ts into this list -->
+          <ul
+            id="produk-grid"
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3"
+            role="list"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer is rendered by src/footer.ts into this slot -->
+    <footer id="site-footer"></footer>
+
+    <script type="module" src="/src/nav.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/footer.ts"></script>
+    <script type="module" src="/src/produk.ts"></script>
+  </body>
+</html>
