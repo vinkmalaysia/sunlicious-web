@@ -55,24 +55,11 @@
     -->
     <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
       <defs>
-        <!-- shared leaf shape for background decorations -->
         <!-- shared stamp star -->
         <path
           id="star5"
           d="M0 -5.2 L1.6 -1.6 L5.4 -1.1 L2.6 1.4 L3.4 5.2 L0 3.1 L-3.4 5.2 L-2.6 1.4 L-5.4 -1.1 L-1.6 -1.6 Z"
         />
-
-        <!-- shared leaf shape for background decorations -->
-        <g id="leaf-shape">
-          <path d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z" />
-          <path
-            d="M0 -12 C-1 -58 0 -100 2 -138"
-            fill="none"
-            stroke="rgba(15,90,43,.25)"
-            stroke-width="5"
-            stroke-linecap="round"
-          />
-        </g>
 
         <!-- scene gradients -->
         <linearGradient id="g-juice" x1="0" y1="0" x2="1" y2="0">
@@ -135,58 +122,6 @@
           "
           aria-hidden="true"
         ></div>
-
-        <!-- LAYER decor-bg: leaves (one svg per leaf, individually positionable) -->
-        <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -top-3 left-[6%] w-16 rotate-[38deg] opacity-90 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-14 left-[13%] w-12 rotate-[64deg] opacity-80 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#45b54e" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-[34%] -left-8 w-24 rotate-[78deg] opacity-90"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -top-4 right-[4%] w-14 rotate-[145deg] opacity-80 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-[30%] -right-10 w-32 rotate-[105deg] opacity-70 blur-[2px]"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute bottom-24 left-[3%] w-24 -rotate-[24deg] opacity-95"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute bottom-40 left-[9%] w-14 rotate-[16deg] opacity-90"
-          >
-            <use href="#leaf-shape" fill="#45b54e" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute bottom-16 right-[38%] w-16 rotate-[130deg] opacity-80"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-        </div>
 
         <!-- LAYER decor-fg: lime wash + corner brush strokes -->
         <div class="pointer-events-none absolute inset-x-0 bottom-0" aria-hidden="true">
@@ -293,7 +228,7 @@
             </h1>
 
             <p
-              class="rise relative left-6 max-w-[540px] -top-2 -mt-4 -rotate-12 text-center font-hand text-3xl font-bold text-sun-green max-lg:order-2 sm:left-3.5 sm:text-[34px] lg:left-10"
+              class="rise relative left-6 max-w-[540px] -top-2 -mt-4 -rotate-12 text-center font-hand text-3xl font-bold text-sun-pine max-lg:order-2 sm:left-3.5 sm:text-[34px] lg:left-10"
               style="animation-delay: 0.12s"
             >
               Segar <span class="mx-1 text-sun-orange">•</span> Semula Jadi
@@ -469,18 +404,6 @@
 
         <!-- LAYER decor-bg -->
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -right-9 top-[16%] w-24 rotate-[118deg] opacity-70 blur-[2px]"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -left-7 bottom-24 w-20 -rotate-[28deg] opacity-85"
-          >
-            <use href="#leaf-shape" fill="#45b54e" />
-          </svg>
           <svg viewBox="0 0 44 44" class="absolute bottom-[16%] right-[7%] w-9 rotate-12">
             <path d="M22 2 L27 17 L42 22 L27 27 L22 42 L17 27 L2 22 L17 17 Z" fill="#ffcf33" />
           </svg>
@@ -530,7 +453,7 @@
               id="produk-title"
               class="text-balance font-display font-extrabold leading-[0.9] tracking-[-0.02em]"
             >
-              <span class="block -rotate-2 text-[clamp(2.75rem,5.5vw,4.25rem)] text-sun-green"
+              <span class="block -rotate-2 text-[clamp(2.75rem,5.5vw,4.25rem)] text-sun-pine"
                 >Maklumat</span
               >
               <span
@@ -673,7 +596,7 @@
                         Vitamin C
                       </th>
                       <td class="py-2.5 pl-4 text-right font-extrabold">
-                        140 mg <span class="text-sun-green">(200% CKD*)</span>
+                        140 mg <span class="text-sun-pine">(200% CKD*)</span>
                       </td>
                       <td class="py-2.5 pl-4 text-right font-extrabold">28 mg</td>
                     </tr>
@@ -821,18 +744,6 @@
 
         <!-- LAYER decor-bg -->
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -left-9 top-[24%] w-24 rotate-[64deg] opacity-75 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -right-8 bottom-[30%] w-24 rotate-[130deg] opacity-80 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
           <svg viewBox="0 0 44 44" class="absolute right-[10%] top-[12%] w-8 -rotate-6">
             <path d="M22 2 L27 17 L42 22 L27 27 L22 42 L17 27 L2 22 L17 17 Z" fill="#ffcf33" />
           </svg>
@@ -840,7 +751,9 @@
           <span class="absolute right-[26%] top-[42%] h-2 w-2 rounded-full bg-sun-juice"></span>
         </div>
 
-        <!-- LAYER decor-parallax: see the hero scene comment for how this works -->
+        <!-- LAYER decor-parallax: raster props nudged by parallax.js (scenes are
+             initialised in src/parallax.ts; the tentang scene keeps only its
+             photo layers — see the hero scene comment for how this works) -->
         <div
           class="pointer-events-none absolute inset-0 z-[5]"
           data-parallax-scene
@@ -877,7 +790,7 @@
               id="tentang-title"
               class="text-balance font-display font-extrabold leading-[0.9] tracking-[-0.02em]"
             >
-              <span class="block -rotate-2 text-[clamp(2.75rem,5.5vw,4.25rem)] text-sun-green"
+              <span class="block -rotate-2 text-[clamp(2.75rem,5.5vw,4.25rem)] text-sun-pine"
                 >Dari Kilang</span
               >
               <span
@@ -1179,7 +1092,7 @@
                     <h3 class="font-display text-[27px] font-extrabold leading-none text-sun-pine">
                       Kilang Kami
                     </h3>
-                    <p class="mt-1.5 text-[14px] font-extrabold text-sun-green">
+                    <p class="mt-1.5 text-[14px] font-extrabold text-sun-pine">
                       Rasa Suria Sdn. Bhd.
                     </p>
                   </div>
@@ -1225,7 +1138,7 @@
                       <circle cx="12" cy="10" r="2.4" />
                     </svg>
                     <address class="not-italic">
-                      Lot 2888, Jalan Nanas 3,<br />
+                      No. 22, Jalan Pasir Gudang,<br />
                       Kawasan Perindustrian Pasir Gudang,<br />
                       81700 Pasir Gudang, Johor Darul Ta&rsquo;zim, Malaysia
                     </address>
@@ -1247,15 +1160,15 @@
                     </svg>
                     <p>
                       <a
-                        href="tel:+6072518899"
+                        href="tel:+6072514328"
                         class="transition hover:text-sun-green hover:underline"
-                        >+607-251 8899</a
+                        >+607-251 4328</a
                       >
                       &middot;
                       <a
-                        href="tel:+60128834455"
+                        href="https://wa.me/60125843107"
                         class="transition hover:text-sun-green hover:underline"
-                        >WhatsApp +6012-883 4455</a
+                        >WhatsApp +6012-584 3107</a
                       >
                     </p>
                   </li>
@@ -1325,7 +1238,7 @@
                     </svg>
                   </a>
                   <p class="text-[11px] font-bold text-sun-pine/90">
-                    No. Syarikat 201101012345 (987654-K)
+                    No. Syarikat 200701029884 (1028473-D)
                   </p>
                 </div>
               </div>

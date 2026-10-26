@@ -53,7 +53,7 @@ if (footer) {
           </p>
           <div class="mt-6 flex gap-3">
             <a
-              href="/index.html"
+              href="https://www.instagram.com/rasasuria.my"
               class="grid h-10 w-10 place-items-center rounded-full border-[1.5px] border-white/30 text-white/85 transition hover:border-white/60 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sun-juice"
               aria-label="Rasa Suria di Instagram"
             >
@@ -73,7 +73,7 @@ if (footer) {
               </svg>
             </a>
             <a
-              href="/index.html"
+              href="https://www.facebook.com/rasasuria.my"
               class="grid h-10 w-10 place-items-center rounded-full border-[1.5px] border-white/30 text-white/85 transition hover:border-white/60 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sun-juice"
               aria-label="Rasa Suria di Facebook"
             >
@@ -127,8 +127,8 @@ if (footer) {
                 <circle cx="12" cy="10" r="2.4" />
               </svg>
               <span
-                >Rasa Suria Sdn. Bhd., Lot 2888, Jalan Nanas 3, Kawasan Perindustrian Pasir Gudang,
-                81700 Pasir Gudang, Johor Darul Ta&rsquo;zim, Malaysia</span
+                >Rasa Suria Sdn. Bhd., No. 22, Jalan Pasir Gudang, Kawasan Perindustrian Pasir
+                Gudang, 81700 Pasir Gudang, Johor Darul Ta&rsquo;zim, Malaysia</span
               >
             </p>
             <p class="flex gap-2.5">
@@ -146,7 +146,7 @@ if (footer) {
                   d="M5 4 h4 l1.5 4.5 -2.2 1.6 a12.5 12.5 0 0 0 5.6 5.6 l1.6 -2.2 L20 15 v4 a1.8 1.8 0 0 1 -2 1.8 C10.6 20.2 3.8 13.4 3.2 6 a1.8 1.8 0 0 1 1.8 -2 Z"
                 />
               </svg>
-              <a href="tel:+6072518899" class="transition hover:text-white">+607-251 8899</a>
+              <a href="tel:+6072514328" class="transition hover:text-white">+607-251 4328</a>
             </p>
             <p class="flex gap-2.5">
               <svg
@@ -180,7 +180,10 @@ if (footer) {
                 <circle cx="12" cy="12" r="8.5" />
                 <path d="M12 7.5 V12 L15 14" />
               </svg>
-              <span>Isnin&ndash;Jumaat: 8:30 pagi &ndash; 5:30 petang</span>
+              <span
+                >Isnin&ndash;Jumaat: 8:30 pagi &ndash; 5:30 petang &middot; Sabtu: 8:30 pagi &ndash;
+                1:00 petang</span
+              >
             </p>
           </address>
         </div>
@@ -190,7 +193,7 @@ if (footer) {
         class="mx-auto mt-12 flex max-w-7xl flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-white/15 px-5 pt-6 text-[12.5px] font-bold text-white/70 sm:px-8"
       >
         <p>&copy; 2026 Rasa Suria Sdn. Bhd. &middot; Hak cipta terpelihara.</p>
-        <p>No. Syarikat 201101012345 (987654-K)</p>
+        <p>No. Syarikat 200701029884 (1028473-D)</p>
         <p class="text-sun-juice">Halal JAKIM &middot; MeSTI &middot; HACCP &middot; GMP</p>
       </div>`;
 }
