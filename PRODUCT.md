@@ -1,48 +1,30 @@
-# PRODUCT.md — Rasa Suria
+# PRODUCT.md — SunLicious
 
-> Provenance: simulated from the user's reference key-visual (Capture.JPG) during an
-> unattended session. Every fact below is read off that image; refine with the owner
-> when available.
+> Provenance: distilled from the owner's reference key-visual (Capture.JPG).
+> Facts-free on purpose: no claims, numbers, or contact details live here —
+> those belong to the copy and must come from the owner.
 
-## Product
+## Purpose
 
-**Rasa Suria Sdn. Bhd.** — "Makanan Pilihan Malaysia". A Malaysian food &
-beverage company with a range of products (renamed from "SunLicious" by the
-owner: the company sells various products, not only juice). Flagship: the
-pineapple juice drink ("Jus Nanas", 500ml) positioned as 100% real pineapple
-fruit juice — no preservatives ("Tanpa Pengawet"), no artificial flavouring
-("Tanpa Perisa Tiruan"), rich in Vitamin C. Proudly Malaysian ("Dari Malaysia
-Untuk Anda").
+A single-page marketing site for a fruit-juice drink. The visitor should
+instantly feel "fresh, natural, real fruit" and act on the buy CTA. The page
+is voice-forward: bright, playful, and unmistakably Malaysian in register.
 
-## Audience & scene
+## Artistic direction
 
-Malaysian grocery/beverage shoppers, Malay-speaking, browsing on phones and
-desktops. Warm, sunny, family-friendly register; the brand voice is playful
-(cartoon mascot, hand-lettered accents) but the claim is naturalness and real
-fruit.
-
-## Surface & mode
-
-Marketing landing page — **Persuade** mode. The visitor should, within
-seconds: recognize the product (chilled pineapple juice), believe "real
-fruit, real fresh" (100% badge, vitamin-C badge, freshness badge), and act
-on **Beli Sekarang** (nav CTA) or **Dapatkan Sekarang** (hero CTA).
-
-## Truth the design may state (from the reference)
-
-- Company: Rasa Suria Sdn. Bhd. · Tagline: Makanan Pilihan Malaysia
-- Flagship product: Jus Nanas (500ml); other product lines not yet specified
-- Product: Jus Nanas / Pineapple Juice, 500ml
-- Claims: 100% Buah Nanas Semula Jadi · Kaya dengan Vitamin C ·
-  Menyegarkan Setiap Masa · Tanpa Pengawet · Tanpa Perisa Tiruan
-- Nav: Home · Produk · Kebaikan · Tentang Kami
-
-## Constraints
-
-- Language: Bahasa Malaysia (copy comes verbatim from the reference).
 - Visual world pinned by the reference: sun-yellow ground, brand green,
-  mango-orange, sky-blue blob badges, hand-lettered script accents, cartoon
-  product scene (bottle, pineapples, splash, sunglasses mascot).
-- No product photography exists yet — the scene is authored vector
-  illustration, to be replaced by real key-visual photography when supplied.
-- Prices, retailers, and nutrition numbers are uninventable: none may ship.
+  mango-orange, cream, sky-blue badges, hand-lettered script accents layered
+  over bold display type.
+- Playful-but-honest: cartoon product scene and mascot bring the fun; the
+  claim underneath is naturalness and real fruit.
+- Layered scene model (ground → decor → artwork → copy) so artwork can be
+  swapped without touching text.
+- Copy is Bahasa Malaysia, hand-lettered flourishes in Latin script.
+
+## Hard rules
+
+- Nothing uninventable ships: prices, retailers, certifications, contact
+  details, and nutrition numbers need owner-supplied facts (or explicit
+  "example value" captions, pending real data).
+- No product photography exists yet — the scene is authored illustration,
+  to be replaced by real key-visual photography when supplied.
