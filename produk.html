@@ -44,34 +44,60 @@
         <!-- Photo decor layer: oversized foliage fading into the corners, static and
            never in front of content (same set of PNG layers, see /public). -->
         <div class="pointer-events-none absolute inset-0 select-none" aria-hidden="true">
-          <img
-            src="/layers-_0011_Layer-12.png"
-            alt=""
-            width="488"
-            height="396"
-            class="absolute -top-24 -right-32 w-[26rem] rotate-[24deg] opacity-30 blur-[2px] saturate-[0.85] sm:-top-28 sm:-right-40 sm:w-[34rem]"
-          />
-          <img
-            src="/layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.png"
-            alt=""
-            width="454"
-            height="407"
-            class="absolute -bottom-40 -left-36 w-[28rem] -rotate-[18deg] opacity-25 blur-[2px] saturate-[0.85] sm:-bottom-48 sm:-left-44 sm:w-[36rem]"
-          />
-          <img
-            src="/layers-_0012_Layer-13.png"
-            alt=""
-            width="376"
-            height="372"
-            class="absolute -bottom-24 right-[8%] w-[16rem] rotate-[68deg] opacity-20 blur-[3px] saturate-[0.8] sm:w-[20rem]"
-          />
-          <img
-            src="/layers-_0010_Layer-11.png"
-            alt=""
-            width="718"
-            height="562"
-            class="absolute -top-10 left-[16%] hidden w-[24rem] rotate-[12deg] opacity-[0.12] blur-[3px] saturate-[0.75] lg:block"
-          />
+          <picture>
+            <source srcset="/layers-_0011_Layer-12.avif" type="image/avif" />
+            <source srcset="/layers-_0011_Layer-12.webp" type="image/webp" />
+            <img
+              src="/layers-_0011_Layer-12.webp"
+              alt=""
+              width="488"
+              height="396"
+              class="absolute -top-24 -right-32 w-[26rem] rotate-[24deg] opacity-30 blur-[2px] saturate-[0.85] sm:-top-28 sm:-right-40 sm:w-[34rem]"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="
+                /layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.avif
+              "
+              type="image/avif"
+            />
+            <source
+              srcset="
+                /layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.webp
+              "
+              type="image/webp"
+            />
+            <img
+              src="/layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.webp"
+              alt=""
+              width="454"
+              height="407"
+              class="absolute -bottom-40 -left-36 w-[28rem] -rotate-[18deg] opacity-25 blur-[2px] saturate-[0.85] sm:-bottom-48 sm:-left-44 sm:w-[36rem]"
+            />
+          </picture>
+          <picture>
+            <source srcset="/layers-_0012_Layer-13.avif" type="image/avif" />
+            <source srcset="/layers-_0012_Layer-13.webp" type="image/webp" />
+            <img
+              src="/layers-_0012_Layer-13.webp"
+              alt=""
+              width="376"
+              height="372"
+              class="absolute -bottom-24 right-[8%] w-[16rem] rotate-[68deg] opacity-20 blur-[3px] saturate-[0.8] sm:w-[20rem]"
+            />
+          </picture>
+          <picture>
+            <source srcset="/layers-_0010_Layer-11.avif" type="image/avif" />
+            <source srcset="/layers-_0010_Layer-11.webp" type="image/webp" />
+            <img
+              src="/layers-_0010_Layer-11.webp"
+              alt=""
+              width="718"
+              height="562"
+              class="absolute -top-10 left-[16%] hidden w-[24rem] rotate-[12deg] opacity-[0.12] blur-[3px] saturate-[0.75] lg:block"
+            />
+          </picture>
         </div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
