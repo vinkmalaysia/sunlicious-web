@@ -70,6 +70,16 @@
   animation: pop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Scroll-reveal targets start invisible so they never paint at full opacity
+   in the gap before the IntersectionObserver adds .rise/.pop (FOUC blink).
+   Gated on the `js` class from the inline head script, and dropped once the
+   reveal class lands (the animation's own `from { opacity: 0 }` takes over —
+   an always-on opacity: 0 would poison the implicit `to` keyframe and leave
+   the element permanently invisible). Without JS everything stays visible. */
+html.js [data-reveal]:not(.rise):not(.pop) {
+  opacity: 0;
+}
+
 /* SVG motion helpers — fill-box so rotation pivots on the drawn shape. */
 .rock,
 .bob {

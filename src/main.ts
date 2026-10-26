@@ -21,18 +21,27 @@ if (location.hash.length > 1) {
 /* ---------- scroll reveal for below-the-fold sections ---------- */
 
 const revealables = document.querySelectorAll<HTMLElement>("[data-reveal]");
+const revealClass = (el: HTMLElement) =>
+  el.classList.add(el.dataset.reveal === "pop" ? "pop" : "rise");
 if ("IntersectionObserver" in window && revealables.length) {
   const io = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         const el = entry.target as HTMLElement;
-        el.classList.add(el.dataset.reveal === "pop" ? "pop" : "rise");
         if (el.dataset.delay) el.style.animationDelay = el.dataset.delay;
+        revealClass(el);
         io.unobserve(el);
       }
     },
     { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
   );
   revealables.forEach((el) => io.observe(el));
+} else {
+  /* No IntersectionObserver: the CSS pre-hide keeps these at opacity 0, so
+     reveal them all immediately instead of hiding the content forever. */
+  revealables.forEach((el) => {
+    if (el.dataset.delay) el.style.animationDelay = el.dataset.delay;
+    revealClass(el);
+  });
 }
