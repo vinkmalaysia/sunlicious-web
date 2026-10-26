@@ -11,8 +11,8 @@
     />
     <title>SunLicious - Minuman segar dari Malaysia</title>
     <script>
-      /* Runs before first paint: enables JS-gated styling such as the
-         scroll-reveal pre-hide in src/style.css (prevents the FOUC blink). */
+      // Runs before first paint — enables JS-gated styling such as the
+      // scroll-reveal pre-hide in src/style.css.
       document.documentElement.classList.add("js");
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,33 +24,8 @@
   </head>
   <body class="bg-sun-yellow font-sans text-sun-pine antialiased">
     <!--
-      DIRECTION CONTRACT — Rasa Suria hero (brief-pinned: user reference key-visual, seed: pinned-by-reference)
-      THESIS: a sun-drenched Malaysian fruit-stand poster, not a generic product-hero template — the illustrated
-      key-visual IS the hero, type and fruit share one cartoon world.
-      OWN-WORLD: sun-yellow radial ground with lime wash strokes and tropical leaves; brand greens #1f8a3b/#0f5a2b,
-      mango orange #f6921e, sky-blue #229fd6 blob badges; Baloo 2 display, Caveat hand-lettering, Nunito UI; the
-      bottle/pineapple/splash/mascot scene is authored vector illustration standing in for photography.
-      STORY: within seconds the visitor reads "Jus Nanas", believes 100% real fruit (badge strip), and acts
-      on Dapatkan Sekarang.
-      FIRST VIEWPORT: nav (SunLicious logo left · Home/Produk/Kebaikan/Tentang Kami centred · mobile menu toggle
-      right); left column = "Jus Nanas" logo lockup + badge strip (both rasters, static), script tagline,
-      green pill CTA beside handwritten "Dari Malaysia Untuk Anda"; right 55% = splash scene — bottle on
-      wooden board flanked by whole and cut pineapples, sunglasses mascot, handwritten "Rasa Nanas Yang Sebenar!";
-      green brush strokes and leaves frame the bottom corners.
-      LOWER PAGE: the poster world continues below the fold — bilingual nutrition-label panel
-      (Produk), four certification stamps + Johor factory card (Tentang Kami), pine-dark footer.
-      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict,
-      DESIGN.md, and every shipping raster carrying its provenance.
-    -->
-    <!--
       Layer model (bottom → top), so artwork can be swapped without touching copy:
-        1. LAYER ground     — sun-yellow radial gradient div
-        2. LAYER decor-bg   — individual leaf <svg>s (each its own absolutely-positioned layer)
-        3. LAYER decor-fg   — lime wash + brush-stroke <svg>s (individual layers)
-        4. LAYER artwork    — #hero-artwork: the real product key-visual (featured_nanas.webp);
-                              label badges and product marks are baked into the raster
-        5. LAYER text       — all copy is HTML text (divs/p/h1) in z-10 grid, stamps/notes are
-                              separate HTML/SVG elements layered above the artwork
+        LAYER ground → decor-bg → decor-fg → artwork (#hero-artwork) → text (all copy is HTML).
       The header/topnav and footer are shared components rendered by src/nav.ts and src/footer.ts.
     -->
     <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
@@ -170,24 +145,15 @@
           </svg>
         </div>
 
-        <!-- LAYER seam: continuous sun-ground color across section boundaries —
-             every boundary blends through the darkest ground tone (#e9d81c). -->
+        <!-- LAYER seam: section boundaries blend through the darkest ground tone (#e9d81c) -->
         <div
           class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#e9d81c] to-transparent"
           aria-hidden="true"
         ></div>
 
-        <!-- LAYER decor-parallax: raster props nudged by parallax.js (scenes are
-             initialised in src/parallax.ts; the scene's data-scalar-x/y set the
-             pointer-swing amplitude (~18% width / ~14% height) and each frame's
-             data-depth scales it (0.15–0.45, foreground props move more). Each
-             direct child is a full-bleed positioning frame because parallax.js
-             pins them at the scene's top-left and moves them via its own
-             transform. z-[5] keeps them above every z-auto section
-             ground/decor across section borders (props may drift over a seam),
-             yet below the z-10 copy and the z-40 header — so they never sit
-             over text or nav. The inner img's data-drift (0.12–0.28) is the
-             separate scroll-driven rise speed handled in src/parallax.ts. -->
+        <!-- LAYER decor-parallax: raster props nudged by parallax.js (initialised in
+             src/parallax.ts); direct children are full-bleed positioning frames, z-[5]
+             keeps props above section decor but below copy and nav. -->
         <div
           class="pointer-events-none absolute inset-0 z-[5]"
           data-parallax-scene
@@ -225,9 +191,7 @@
         <div
           class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-4 px-5 pb-44 pt-28 sm:px-8 lg:max-h-[900px] lg:grid-cols-[45%_55%] lg:gap-4 lg:pb-36 lg:pt-24"
         >
-          <!-- ============ LAYER text: left column (all copy is HTML).
-               On phones the column dissolves so the artwork slot can slot in
-               between the tagline and the badges (order utilities below). ============ -->
+          <!-- ============ LAYER text: left column ============ -->
           <div class="max-lg:contents">
             <h1 id="hero-title" class="max-w-[540px] max-lg:order-1">
               <picture>
@@ -323,8 +287,7 @@
             class="pop relative max-lg:order-3 max-lg:mt-6 lg:translate-y-3"
             style="animation-delay: 0.15s"
           >
-            <!-- LAYER text overlay: handwritten stamp (HTML, overlaying the artwork
-                 just above the pineapple mascot) -->
+            <!-- LAYER text overlay: handwritten stamp -->
             <div
               class="pointer-events-none absolute top-[12%] right-0 z-20 rotate-[-8deg] text-right sm:top-[26%] sm:right-2"
               aria-hidden="true"
@@ -355,13 +318,8 @@
               </svg>
             </div>
 
-            <!-- LAYER artwork: single swappable slot — replace this whole <svg> with
-                 <img src="your-key-visual.png" class="h-auto w-full" alt="" /> when ready -->
+            <!-- LAYER artwork -->
             <div id="hero-artwork" class="animate-float">
-              <!-- LAYER artwork: real product key-visual (public/featured_nanas.webp, 737x747
-                   webp with alpha). The SunLicious label, "100% BUAH NANAS" badge, 500ml mark,
-                   "Tanpa Pengawet" note and mascot are baked into the artwork, so the former
-                   HTML overlay stamps were dropped in this swap. -->
               <img
                 src="/featured_nanas.webp"
                 alt="Botol Jus Nanas SunLicious 500ml dikelilingi buah nanas, percikan jus dan maskot nanas bergaya"
@@ -374,9 +332,7 @@
             </div>
           </div>
         </div>
-        <!-- LAYER decor-parallax-fg: the palm sits over the copy itself — same
-             rig as the scene above but layered above the z-10 grid (still
-             under the z-40 header; pointer-events-none keeps CTAs clickable). -->
+        <!-- LAYER decor-parallax-fg: palm layered above the copy (z-20), below the header -->
         <div
           class="pointer-events-none absolute inset-0 z-20"
           data-parallax-scene
@@ -422,7 +378,7 @@
           aria-hidden="true"
         ></div>
 
-        <!-- LAYER seam: see the hero ramp comment -->
+        <!-- LAYER seam: see the hero seam comment -->
         <div
           class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-[#e9d81c] to-transparent"
           aria-hidden="true"
@@ -437,7 +393,7 @@
           <span class="absolute right-[30%] top-[10%] h-2 w-2 rounded-full bg-sun-juice"></span>
         </div>
 
-        <!-- LAYER decor-parallax: see the hero scene comment for how this works -->
+        <!-- LAYER decor-parallax: see the hero scene comment -->
         <div
           class="pointer-events-none absolute inset-0 z-[5]"
           data-parallax-scene
@@ -477,8 +433,7 @@
         </div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
-          <!-- id="kebaikan" anchors here (not the benefits column) so the jump
-               lands at the top of the section instead of clipping it mid-view -->
+          <!-- id="kebaikan" anchors here so the jump lands at the section top -->
           <div
             id="kebaikan"
             class="mb-12 flex scroll-mt-12 max-w-3xl flex-wrap items-end gap-x-10 gap-y-5 sm:mb-16"
@@ -746,7 +701,7 @@
           </div>
         </div>
 
-        <!-- LAYER seam: see the hero ramp comment -->
+        <!-- LAYER seam: see the hero seam comment -->
         <div
           class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#e9d81c] to-transparent"
           aria-hidden="true"
@@ -770,7 +725,7 @@
           aria-hidden="true"
         ></div>
 
-        <!-- LAYER seam: see the hero ramp comment -->
+        <!-- LAYER seam: see the hero seam comment -->
         <div
           class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-[#e9d81c] to-transparent"
           aria-hidden="true"
@@ -785,9 +740,7 @@
           <span class="absolute right-[26%] top-[42%] h-2 w-2 rounded-full bg-sun-juice"></span>
         </div>
 
-        <!-- LAYER decor-parallax: raster props nudged by parallax.js (scenes are
-             initialised in src/parallax.ts; the tentang scene keeps only its
-             photo layers — see the hero scene comment for how this works) -->
+        <!-- LAYER decor-parallax -->
         <div
           class="pointer-events-none absolute inset-0 z-[5]"
           data-parallax-scene

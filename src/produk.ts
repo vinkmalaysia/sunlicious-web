@@ -1,6 +1,4 @@
-/* Galeri Produk — catalog cards rendered from data. Product photography lives
-   in /public (WebP + AVIF per image); swap the entries (and drop the images in)
-   as new flavors ship. */
+/* Galeri Produk — catalog cards rendered from data. */
 
 type Product = {
   name: string;

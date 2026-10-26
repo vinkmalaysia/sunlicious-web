@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-/*
- * SunLicious design tokens — sun-yellow ground, brand greens, mango orange,
- * sky-blue badge, Baloo 2 display, Caveat hand-lettering, Nunito UI.
- */
+/* Design tokens */
 @theme {
   --font-display: "Baloo 2", "Nunito", ui-rounded, system-ui, sans-serif;
   --font-hand: "Caveat", "Segoe Script", cursive;
@@ -48,8 +45,7 @@
   }
 }
 
-/* Entrance: fade-rise, animated on the `translate` property so it never
-   clobbers the standalone `rotate` utilities used on the same elements. */
+/* Animated on `translate` so it never clobbers standalone `rotate` utilities. */
 @keyframes rise {
   from {
     opacity: 0;
@@ -70,12 +66,8 @@
   animation: pop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Scroll-reveal targets start invisible so they never paint at full opacity
-   in the gap before the IntersectionObserver adds .rise/.pop (FOUC blink).
-   Gated on the `js` class from the inline head script, and dropped once the
-   reveal class lands (the animation's own `from { opacity: 0 }` takes over —
-   an always-on opacity: 0 would poison the implicit `to` keyframe and leave
-   the element permanently invisible). Without JS everything stays visible. */
+/* JS-gated pre-hide until the reveal class lands (avoids a FOUC blink);
+   without JS everything stays visible. */
 html.js [data-reveal]:not(.rise):not(.pop) {
   opacity: 0;
 }
@@ -93,10 +85,8 @@ html.js [data-reveal]:not(.rise):not(.pop) {
   animation: var(--animate-bob);
 }
 
-/* Desktop nav underline. Static fallback on the aria-current link when JS is
-   unavailable; nav.ts adds .nav-enhanced and swaps in the sliding
-   .nav-underline, which glides to the hovered/focused item and returns to the
-   last active item on leave (same easing as the entrance motion). */
+/* Static underline fallback without JS; .nav-enhanced swaps in the sliding
+   .nav-underline (same easing as the entrance motion). */
 #main-nav a[aria-current="page"]::after {
   content: "";
   position: absolute;
@@ -134,10 +124,8 @@ html.js [data-reveal]:not(.rise):not(.pop) {
 html {
   scroll-behavior: smooth;
   scrollbar-color: var(--color-sun-leaf-deep) var(--color-sun-glow);
-  /* Horizontal-only clip: the sections stay unclipped vertically so the
-     parallax props can float over section seams, while anything poking past
-     the viewport edge (overhanging decor at negative offsets) still can't
-     pan the page sideways. */
+  /* Horizontal-only clip: props float over section seams, but decor must
+     never pan the page sideways. */
   overflow-x: hidden;
 }
 

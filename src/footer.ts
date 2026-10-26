@@ -1,6 +1,4 @@
-/* Shared site footer — rendered into <footer id="site-footer"> on every page.
-   Edit here once; all pages pick it up. The current page's link is highlighted
-   based on the URL path. */
+/* Shared site footer — rendered into <footer id="site-footer"> on every page. */
 
 const isProduk = location.pathname.endsWith("produk.html");
 

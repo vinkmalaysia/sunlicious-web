@@ -1,17 +1,12 @@
 import "./style.css";
 import { initParallax } from "./parallax";
 
-/* Mobile menu + desktop nav underline live in src/nav.ts (the shared topnav
-   component renders that markup and wires its own behaviour). */
-
 initParallax();
 
 /* ---------- re-apply fragment anchor after load ----------
-   The browser's initial fragment jump can be cancelled by the layout shifts
-   that happen while web fonts and content settle (and the site's smooth
-   scroll-behavior makes the abort stick) — leaving the page stuck at the top.
-   Once everything is loaded, jump to the anchor instantly: smooth scrolling
-   here just gives layout shifts another chance to cancel the animation. */
+   Layout shifts during load can cancel the browser's initial fragment jump
+   (smooth scroll-behavior makes the abort stick), so jump again — instantly —
+   once everything is loaded. */
 if (location.hash.length > 1) {
   const reanchor = () => {
     const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
@@ -41,8 +36,8 @@ if ("IntersectionObserver" in window && revealables.length) {
   );
   revealables.forEach((el) => io.observe(el));
 } else {
-  /* No IntersectionObserver: the CSS pre-hide keeps these at opacity 0, so
-     reveal them all immediately instead of hiding the content forever. */
+  /* No IntersectionObserver: reveal all immediately, or the CSS pre-hide
+     hides the content forever. */
   revealables.forEach((el) => {
     if (el.dataset.delay) el.style.animationDelay = el.dataset.delay;
     revealClass(el);

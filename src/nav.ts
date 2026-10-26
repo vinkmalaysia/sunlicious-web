@@ -1,7 +1,4 @@
-/* Shared site header/topnav — rendered into <header id="site-header"> on every page.
-   Edit here once; all pages pick it up. The current page's link is highlighted
-   based on the URL path. Same-page anchors stay clean (#kebaikan on the homepage,
-   /index.html#kebaikan elsewhere). */
+/* Shared site header/topnav — rendered into <header id="site-header"> on every page. */
 
 const isProduk = location.pathname.endsWith("produk.html");
 
@@ -45,8 +42,6 @@ if (header) {
           />
         </a>
 
-        <!-- Desktop nav: absolutely centred in the bar so it stays balanced
-             now that the right side carries only the mobile menu toggle -->
         <nav
           id="main-nav"
           class="relative hidden items-center gap-9 max-lg:hidden lg:absolute lg:left-1/2 lg:top-1/2 lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2"
@@ -124,9 +119,8 @@ document.addEventListener("keydown", (event) => {
 });
 
 /* ---------- desktop nav: sliding underline ----------
-   One underline glides to the hovered/focused link; on leave it slides back
-   to the last active item. Clicking a link makes it the active item. The
-   .nav-enhanced class swaps the static aria-current fallback for the slider. */
+   Glides to the hovered/focused link, returns to the last active item on
+   leave; .nav-enhanced swaps the static aria-current fallback for it. */
 
 const nav = document.querySelector<HTMLElement>("#main-nav");
 const underline = nav?.querySelector<HTMLElement>(".nav-underline");
