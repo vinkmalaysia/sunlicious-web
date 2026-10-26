@@ -44,7 +44,7 @@ if (grid) {
       (p, i) => `
   <li data-reveal="pop" style="animation-delay: ${(i * 0.08).toFixed(2)}s" class="h-full">
     <figure
-      class="flex h-full flex-col rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-3"
+      class="flex h-full flex-col rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/5 sm:p-3"
     >
       <div
         class="relative grid aspect-[4/5] place-items-center overflow-hidden rounded-xl"

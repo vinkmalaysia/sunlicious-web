@@ -18,22 +18,6 @@
     />
   </head>
   <body class="bg-sun-yellow font-sans text-sun-pine antialiased">
-    <!-- Shared defs: leaf shape + soft blur, same set as index.html -->
-    <svg width="0" height="0" class="absolute" aria-hidden="true" focusable="false">
-      <defs>
-        <g id="leaf-shape">
-          <path d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z" />
-          <path
-            d="M0 -12 C-1 -58 0 -100 2 -138"
-            fill="none"
-            stroke="rgba(15,90,43,.25)"
-            stroke-width="5"
-            stroke-linecap="round"
-          />
-        </g>
-      </defs>
-    </svg>
-
     <!-- Header/topnav is rendered by src/nav.ts into this slot -->
     <header id="site-header"></header>
 
@@ -57,51 +41,44 @@
           aria-hidden="true"
         ></div>
 
-        <!-- LAYER decor-bg: leaves + sparks, same set as index.html -->
-        <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -top-3 left-[6%] w-16 rotate-[38deg] opacity-90 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-14 left-[13%] w-12 rotate-[64deg] opacity-80 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#45b54e" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-[20%] -left-8 w-24 rotate-[78deg] opacity-90"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute -top-4 right-[4%] w-14 rotate-[145deg] opacity-80 blur-[1.5px]"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute top-[45%] -right-10 w-32 rotate-[105deg] opacity-70 blur-[2px]"
-          >
-            <use href="#leaf-shape" fill="#3aa848" />
-          </svg>
-          <svg
-            viewBox="-22 -160 44 168"
-            class="absolute bottom-24 left-[3%] w-24 -rotate-[24deg] opacity-95"
-          >
-            <use href="#leaf-shape" fill="#2e8b3a" />
-          </svg>
+        <!-- Photo decor layer: oversized foliage fading into the corners, static and
+           never in front of content (same set of PNG layers, see /public). -->
+        <div class="pointer-events-none absolute inset-0 select-none" aria-hidden="true">
+          <img
+            src="/layers-_0011_Layer-12.png"
+            alt=""
+            width="488"
+            height="396"
+            class="absolute -top-24 -right-32 w-[26rem] rotate-[24deg] opacity-30 blur-[2px] saturate-[0.85] sm:-top-28 sm:-right-40 sm:w-[34rem]"
+          />
+          <img
+            src="/layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.png"
+            alt=""
+            width="454"
+            height="407"
+            class="absolute -bottom-40 -left-36 w-[28rem] -rotate-[18deg] opacity-25 blur-[2px] saturate-[0.85] sm:-bottom-48 sm:-left-44 sm:w-[36rem]"
+          />
+          <img
+            src="/layers-_0012_Layer-13.png"
+            alt=""
+            width="376"
+            height="372"
+            class="absolute -bottom-24 right-[8%] w-[16rem] rotate-[68deg] opacity-20 blur-[3px] saturate-[0.8] sm:w-[20rem]"
+          />
+          <img
+            src="/layers-_0010_Layer-11.png"
+            alt=""
+            width="718"
+            height="562"
+            class="absolute -top-10 left-[16%] hidden w-[24rem] rotate-[12deg] opacity-[0.12] blur-[3px] saturate-[0.75] lg:block"
+          />
         </div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
           <div class="mb-12 max-w-2xl sm:mb-16">
             <h2
               id="galeri-title"
-              class="text-balance font-display text-[clamp(2.75rem,5vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.02em] text-sun-green"
+              class="text-balance font-display text-[clamp(2.75rem,5vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.02em] text-sun-pine"
             >
               Galeri Produk
             </h2>
