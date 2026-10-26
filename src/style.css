@@ -70,17 +70,6 @@
   animation: pop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Organic blob silhouettes for the benefit badges. */
-.blob-a {
-  border-radius: 53% 47% 56% 44% / 48% 55% 45% 52%;
-}
-.blob-b {
-  border-radius: 46% 54% 44% 56% / 55% 46% 54% 45%;
-}
-.blob-c {
-  border-radius: 56% 44% 50% 50% / 44% 52% 48% 56%;
-}
-
 /* SVG motion helpers — fill-box so rotation pivots on the drawn shape. */
 .rock,
 .bob {
@@ -92,12 +81,6 @@
 }
 .bob {
   animation: var(--animate-bob);
-}
-
-/* Artwork slot is a size container: overlay stamps size themselves in cqw so
-   they track the artwork at every breakpoint and survive the PNG swap. */
-#hero-artwork {
-  container-type: inline-size;
 }
 
 /* Desktop nav underline. Static fallback on the aria-current link when JS is

@@ -25,11 +25,11 @@
       OWN-WORLD: sun-yellow radial ground with lime wash strokes and tropical leaves; brand greens #1f8a3b/#0f5a2b,
       mango orange #f6921e, sky-blue #229fd6 blob badges; Baloo 2 display, Caveat hand-lettering, Nunito UI; the
       bottle/pineapple/splash/mascot scene is authored vector illustration standing in for photography.
-      STORY: within seconds the visitor reads "Jus Nanas", believes 100% real fruit (three blob badges), and acts
+      STORY: within seconds the visitor reads "Jus Nanas", believes 100% real fruit (badge strip), and acts
       on Dapatkan Sekarang.
       FIRST VIEWPORT: nav (SunLicious logo left · Home/Produk/Kebaikan/Tentang Kami centred · mobile menu toggle
-      right); left column = stacked display headline with hand-drawn sparks + smile arc, script tagline, three blob
-      badges, green pill CTA beside handwritten "Dari Malaysia Untuk Anda"; right 55% = splash scene — bottle on
+      right); left column = "Jus Nanas" logo lockup + badge strip (both rasters, static), script tagline,
+      green pill CTA beside handwritten "Dari Malaysia Untuk Anda"; right 55% = splash scene — bottle on
       wooden board flanked by whole and cut pineapples, sunglasses mascot, handwritten "Rasa Nanas Yang Sebenar!";
       green brush strokes and leaves frame the bottom corners.
       LOWER PAGE: the poster world continues below the fold — bilingual nutrition-label panel
@@ -42,7 +42,8 @@
         1. LAYER ground     — sun-yellow radial gradient div
         2. LAYER decor-bg   — individual leaf <svg>s (each its own absolutely-positioned layer)
         3. LAYER decor-fg   — lime wash + brush-stroke <svg>s (individual layers)
-        4. LAYER artwork    — #hero-artwork: one single <svg> slot; swap for <img src="hero.png">
+        4. LAYER artwork    — #hero-artwork: the real product key-visual (featured_nanas.webp);
+                              label badges and product marks are baked into the raster
         5. LAYER text       — all copy is HTML text (divs/p/h1) in z-10 grid, stamps/notes are
                               separate HTML/SVG elements layered above the artwork
       The header/topnav and footer are shared components rendered by src/nav.ts and src/footer.ts.
@@ -236,168 +237,38 @@
                On phones the column dissolves so the artwork slot can slot in
                between the tagline and the badges (order utilities below). ============ -->
           <div class="max-lg:contents">
-            <div class="rise relative inline-block max-lg:order-1">
-              <h1
-                id="hero-title"
-                class="font-display font-extrabold leading-[0.82] tracking-[-0.02em]"
-              >
-                <span class="block -rotate-2 text-[clamp(4rem,9vw,8.25rem)] text-sun-green"
-                  >Jus</span
-                >
-                <span
-                  class="ml-[0.55em] block rotate-1 text-[clamp(4.5rem,10.5vw,9.25rem)] text-sun-orange"
-                  >Nanas</span
-                >
-              </h1>
-              <!-- hand-drawn sparks -->
-              <svg
-                viewBox="0 0 36 34"
-                class="absolute -left-9 top-3 w-8 -rotate-12"
-                aria-hidden="true"
-              >
-                <path
-                  d="M6 26 L20 10 M16 30 L30 14"
-                  stroke="#fff9e3"
-                  stroke-width="7"
-                  stroke-linecap="round"
-                  fill="none"
-                />
-              </svg>
-              <svg
-                viewBox="0 0 44 44"
-                class="absolute -right-7 -top-6 w-10 rotate-12"
-                aria-hidden="true"
-              >
-                <path d="M22 2 L27 17 L42 22 L27 27 L22 42 L17 27 L2 22 L17 17 Z" fill="#ffcf33" />
-                <circle cx="40" cy="6" r="3" fill="#fff9e3" />
-              </svg>
-              <svg
-                viewBox="0 0 34 20"
-                class="absolute -right-9 bottom-10 w-8 rotate-6"
-                aria-hidden="true"
-              >
-                <path
-                  d="M4 14 L18 6 M14 18 L28 10"
-                  stroke="#f6921e"
-                  stroke-width="6"
-                  stroke-linecap="round"
-                  fill="none"
-                />
-              </svg>
-              <!-- smile arc under the word -->
-              <svg
-                viewBox="0 0 200 56"
-                class="absolute -bottom-9 left-[34%] w-40 -rotate-2"
-                aria-hidden="true"
-              >
-                <path
-                  d="M10 10 C60 50 140 50 190 10"
-                  fill="none"
-                  stroke="#1f8a3b"
-                  stroke-width="10"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
+            <h1 id="hero-title" class="max-w-[540px] max-lg:order-1">
+              <img
+                src="/product-logo-large.png"
+                alt="Jus Nanas"
+                class="h-auto w-full"
+                width="854"
+                height="451"
+                loading="eager"
+                decoding="async"
+              />
+            </h1>
 
             <p
-              class="rise mt-9 -rotate-2 font-hand text-3xl font-bold text-sun-green max-lg:order-2 sm:text-[34px]"
+              class="rise relative left-6 max-w-[540px] -top-2 -mt-4 -rotate-12 text-center font-hand text-3xl font-bold text-sun-green max-lg:order-2 sm:left-3.5 sm:text-[34px] lg:left-10"
               style="animation-delay: 0.12s"
             >
               Segar <span class="mx-1 text-sun-orange">•</span> Semula Jadi
               <span class="mx-1 text-sun-orange">•</span> Penuh Rasa
             </p>
 
-            <!-- promise blobs -->
-            <ul class="mt-9 flex flex-wrap items-start gap-4 max-lg:order-5 sm:gap-5" role="list">
-              <li class="rise" style="animation-delay: 0.2s">
-                <div
-                  class="blob-a flex w-[138px] -rotate-3 flex-col items-center bg-sun-leaf px-4 pb-5 pt-4 text-center shadow-lg shadow-sun-leaf-deep/30 transition-transform duration-300 hover:scale-105 sm:w-[152px]"
-                >
-                  <span class="grid h-11 w-11 place-items-center rounded-full bg-white">
-                    <svg
-                      class="h-6 w-6 text-sun-leaf-deep"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M5.5 18.5 C5.5 10.5 11.5 4.5 20 4.5 C20 13 14 19 5.5 18.5 Z" />
-                      <path
-                        d="M4 20.5 C7 15.5 11 11.5 16.5 8.5"
-                        fill="none"
-                        stroke="#fff"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    class="mt-2 text-[13px] font-extrabold leading-snug text-white drop-shadow-[0_1px_1px_rgba(15,60,25,0.35)]"
-                  >
-                    100%<br />Buah Nanas<br />Semula Jadi
-                  </span>
-                </div>
-              </li>
-              <li class="rise" style="animation-delay: 0.28s">
-                <div
-                  class="blob-b flex w-[138px] rotate-2 flex-col items-center bg-sun-orange px-4 pb-5 pt-4 text-center shadow-lg shadow-[#8a4a08]/30 transition-transform duration-300 hover:scale-105 sm:w-[152px]"
-                >
-                  <span class="grid h-11 w-11 place-items-center rounded-full bg-white">
-                    <svg
-                      class="h-6 w-6 text-sun-orange"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 2.5 L20 5.5 V11.5 C20 16.8 16.6 20.2 12 22 C7.4 20.2 4 16.8 4 11.5 V5.5 Z"
-                      />
-                      <path
-                        d="M12 8 v7 M8.5 11.5 h7"
-                        fill="none"
-                        stroke="#fff"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    class="mt-2 text-[13px] font-extrabold leading-snug text-white drop-shadow-[0_1px_1px_rgba(90,40,0,0.35)]"
-                  >
-                    Kaya dengan<br />Vitamin C
-                  </span>
-                </div>
-              </li>
-              <li class="rise" style="animation-delay: 0.36s">
-                <div
-                  class="blob-c flex w-[138px] -rotate-2 flex-col items-center bg-sun-blue px-4 pb-5 pt-4 text-center shadow-lg shadow-[#0c5a80]/30 transition-transform duration-300 hover:scale-105 sm:w-[152px]"
-                >
-                  <span class="grid h-11 w-11 place-items-center rounded-full bg-white">
-                    <svg
-                      class="h-6 w-6 text-sun-blue"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="8.5" />
-                      <circle cx="9" cy="10" r="1.2" fill="currentColor" stroke="none" />
-                      <circle cx="15" cy="10" r="1.2" fill="currentColor" stroke="none" />
-                      <path d="M8.5 14 C10 16 14 16 15.5 14" />
-                    </svg>
-                  </span>
-                  <span
-                    class="mt-2 text-[13px] font-extrabold leading-snug text-white drop-shadow-[0_1px_1px_rgba(6,50,75,0.35)]"
-                  >
-                    Menyegarkan<br />Setiap Masa
-                  </span>
-                </div>
-              </li>
-            </ul>
+            <!-- promise badges (raster, static) -->
+            <img
+              src="/facts-badges.png"
+              alt="100% Buah Nanas Semula Jadi · Kaya dengan Vitamin C · Menyegarkan Setiap Masa"
+              class="mt-9 h-auto w-full max-w-[600px] max-lg:order-4"
+              width="962"
+              height="289"
+              loading="lazy"
+              decoding="async"
+            />
 
-            <div class="mt-10 flex flex-wrap items-center gap-x-9 gap-y-5 max-lg:order-4">
+            <div class="mt-10 flex flex-wrap items-center gap-x-9 gap-y-5 max-lg:order-5">
               <a
                 href="#hubungi"
                 class="rise inline-flex items-center gap-3 rounded-full bg-sun-green px-8 py-4 text-lg font-extrabold text-white shadow-xl shadow-sun-pine/30 transition hover:-translate-y-0.5 hover:bg-sun-pine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sun-pine"
@@ -452,9 +323,10 @@
             class="pop relative max-lg:order-3 max-lg:mt-6 lg:translate-y-3"
             style="animation-delay: 0.15s"
           >
-            <!-- LAYER text overlay: handwritten stamp (HTML, above artwork) -->
+            <!-- LAYER text overlay: handwritten stamp (HTML, overlaying the artwork
+                 just above the pineapple mascot) -->
             <div
-              class="pointer-events-none absolute -top-4 right-0 z-20 rotate-[-8deg] text-right sm:right-4"
+              class="pointer-events-none absolute top-[12%] right-0 z-20 rotate-[-8deg] text-right sm:top-[26%] sm:right-2"
               aria-hidden="true"
             >
               <p
@@ -486,409 +358,19 @@
             <!-- LAYER artwork: single swappable slot — replace this whole <svg> with
                  <img src="your-key-visual.png" class="h-auto w-full" alt="" /> when ready -->
             <div id="hero-artwork" class="animate-float">
-              <!-- LAYER artwork: illustrated key-visual (stand-in for product photography) -->
-              <svg
-                viewBox="0 0 720 640"
-                class="h-auto w-full drop-shadow-xl"
-                role="img"
-                aria-labelledby="scene-title"
-              >
-                <title id="scene-title">
-                  Ilustrasi botol Jus Nanas Rasa Suria di atas papan kayu, dikelilingi buah nanas,
-                  titisan jus dan watak maskot nanas
-                </title>
-
-                <!-- juice splash -->
-                <g class="bob">
-                  <path
-                    d="M120 470 C70 430 55 360 90 310 C60 260 85 195 150 175 C165 115 235 80 305 92 C345 55 425 50 470 88 C540 62 615 95 630 160 C680 190 695 260 665 310 C700 360 685 435 620 470 C540 545 180 548 120 470 Z"
-                    fill="url(#g-splash)"
-                  />
-                  <path
-                    d="M225 108 C215 62 232 26 250 4 C262 44 256 84 246 110 Z"
-                    fill="url(#g-splash)"
-                  />
-                  <path
-                    d="M425 80 C428 40 446 16 464 0 C466 38 452 72 440 92 Z"
-                    fill="url(#g-splash)"
-                  />
-                  <path
-                    d="M555 135 C572 106 594 90 620 82 C610 114 590 140 572 152 Z"
-                    fill="url(#g-splash)"
-                  />
-                  <ellipse
-                    cx="330"
-                    cy="300"
-                    rx="150"
-                    ry="88"
-                    fill="#ffe985"
-                    opacity="0.35"
-                    transform="rotate(-12 330 300)"
-                  />
-                  <circle cx="110" cy="250" r="9" fill="#ffcf33" />
-                  <circle cx="85" cy="330" r="6" fill="#ffcf33" />
-                  <circle cx="650" cy="250" r="11" fill="#ffcf33" />
-                  <circle cx="615" cy="120" r="7" fill="#ffcf33" />
-                  <circle cx="180" cy="130" r="8" fill="#ffcf33" />
-                  <circle cx="545" cy="75" r="6" fill="#ffcf33" />
-                  <circle cx="60" cy="420" r="7" fill="#ffcf33" />
-                  <circle cx="672" cy="390" r="9" fill="#ffcf33" />
-                  <path
-                    d="M0 0 C8 14 8 30 0 40 C-8 30 -8 14 0 0 Z"
-                    fill="#ffcf33"
-                    transform="translate(145 185) rotate(-30)"
-                  />
-                  <path
-                    d="M0 0 C8 14 8 30 0 40 C-8 30 -8 14 0 0 Z"
-                    fill="#ffcf33"
-                    transform="translate(608 168) rotate(25)"
-                  />
-                </g>
-
-                <!-- leaves peeking behind the splash -->
-                <g transform="translate(150 215) rotate(-35) scale(1.2)">
-                  <path
-                    d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z"
-                    fill="url(#g-leaf)"
-                  />
-                </g>
-                <g transform="translate(588 172) rotate(32) scale(1.35)">
-                  <path
-                    d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z"
-                    fill="url(#g-leaf)"
-                  />
-                </g>
-                <g transform="translate(700 430) rotate(78) scale(1.5)">
-                  <path d="M0 0 C-16 -50 -14 -106 2 -152 C16 -104 14 -48 0 0 Z" fill="#2e8b3a" />
-                </g>
-
-                <!-- wooden board -->
-                <ellipse
-                  cx="365"
-                  cy="600"
-                  rx="268"
-                  ry="30"
-                  fill="#8a5a23"
-                  opacity="0.3"
-                  filter="url(#f-soft)"
-                />
-                <ellipse cx="360" cy="592" rx="250" ry="34" fill="#a06a35" />
-                <ellipse cx="360" cy="584" rx="250" ry="32" fill="url(#g-board)" />
-                <path
-                  d="M150 584 Q360 560 570 584"
-                  fill="none"
-                  stroke="#a06a35"
-                  stroke-width="2"
-                  opacity="0.55"
-                />
-                <path
-                  d="M200 597 Q360 578 520 597"
-                  fill="none"
-                  stroke="#a06a35"
-                  stroke-width="2"
-                  opacity="0.45"
-                />
-
-                <!-- whole pineapple, back left -->
-                <g transform="translate(195 456)">
-                  <g fill="url(#g-leaf)">
-                    <path d="M0 -62 C-30 -95 -38 -140 -22 -176 C-8 -138 -4 -98 2 -64 Z" />
-                    <path d="M2 -64 C-8 -110 -2 -160 18 -190 C22 -148 16 -104 8 -62 Z" />
-                    <path
-                      d="M6 -60 C22 -92 48 -118 84 -128 C60 -96 34 -72 12 -56 Z"
-                      fill="#3aa848"
-                    />
-                    <path
-                      d="M-4 -60 C-22 -88 -50 -110 -84 -118 C-58 -92 -30 -68 -8 -54 Z"
-                      fill="#3aa848"
-                    />
-                    <path d="M0 -58 C6 -84 8 -116 2 -150 C-2 -116 -4 -84 -6 -58 Z" fill="#2e8b3a" />
-                  </g>
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#g-pine)" />
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#p-hatch)" />
-                  <ellipse cx="0" cy="-88" rx="14" ry="8" fill="#c97f22" opacity="0.5" />
-                </g>
-
-                <!-- whole pineapple, back right (smaller, mostly behind bottle) -->
-                <g transform="translate(520 420) scale(0.72) rotate(6)">
-                  <g fill="url(#g-leaf)">
-                    <path d="M0 -62 C-30 -95 -38 -140 -22 -176 C-8 -138 -4 -98 2 -64 Z" />
-                    <path d="M2 -64 C-8 -110 -2 -160 18 -190 C22 -148 16 -104 8 -62 Z" />
-                    <path
-                      d="M6 -60 C22 -92 48 -118 84 -128 C60 -96 34 -72 12 -56 Z"
-                      fill="#3aa848"
-                    />
-                    <path
-                      d="M-4 -60 C-22 -88 -50 -110 -84 -118 C-58 -92 -30 -68 -8 -54 Z"
-                      fill="#3aa848"
-                    />
-                  </g>
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#g-pine)" />
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#p-hatch)" />
-                </g>
-
-                <!-- bottle -->
-                <g>
-                  <rect x="330" y="16" width="60" height="44" rx="9" fill="url(#g-cap)" />
-                  <path
-                    d="M336 20 V56 M344 20 V56 M352 20 V56 M360 20 V56 M368 20 V56 M376 20 V56 M384 20 V56"
-                    stroke="#d9820a"
-                    stroke-width="2.5"
-                    opacity="0.6"
-                    stroke-linecap="round"
-                  />
-                  <rect x="334" y="19" width="52" height="10" rx="5" fill="#ffd76e" opacity="0.8" />
-                  <rect x="326" y="58" width="68" height="12" rx="5" fill="#e0890b" />
-                  <path
-                    d="M334 70 L334 96 C334 108 322 112 300 122 C268 136 252 148 252 172 L252 528 C252 552 268 564 292 564 L428 564 C452 564 468 552 468 528 L468 172 C468 148 452 136 420 122 C398 112 386 108 386 96 L386 70 Z"
-                    fill="url(#g-juice)"
-                    stroke="#e89b0c"
-                    stroke-width="2.5"
-                  />
-                  <ellipse cx="360" cy="540" rx="88" ry="18" fill="#f0a50a" opacity="0.3" />
-                  <rect x="264" y="150" width="20" height="360" rx="10" fill="#fff" opacity="0.4" />
-                  <rect x="300" y="132" width="10" height="26" rx="5" fill="#fff" opacity="0.35" />
-                  <g fill="#fff" opacity="0.28">
-                    <circle cx="300" cy="470" r="5" />
-                    <circle cx="330" cy="520" r="7" />
-                    <circle cx="410" cy="500" r="5" />
-                    <circle cx="430" cy="440" r="4" />
-                    <circle cx="280" cy="540" r="4" />
-                    <circle cx="390" cy="545" r="6" />
-                  </g>
-                  <!-- label -->
-                  <rect
-                    x="258"
-                    y="212"
-                    width="204"
-                    height="292"
-                    rx="16"
-                    fill="#fffef4"
-                    stroke="#f0e4b8"
-                    stroke-width="2"
-                  />
-                  <!-- mini pineapple (drawn before label text so fruit never occludes type) -->
-                  <g transform="translate(320 456) scale(0.5)">
-                    <g fill="url(#g-leaf)">
-                      <path d="M0 -30 C-14 -48 -18 -72 -8 -92 C-2 -70 0 -50 2 -32 Z" />
-                      <path
-                        d="M4 -30 C14 -46 26 -58 42 -64 C30 -46 18 -34 8 -28 Z"
-                        fill="#3aa848"
-                      />
-                      <path
-                        d="M-4 -30 C-16 -44 -28 -54 -42 -60 C-30 -44 -18 -32 -8 -28 Z"
-                        fill="#3aa848"
-                      />
-                    </g>
-                    <ellipse cx="0" cy="0" rx="30" ry="38" fill="url(#g-pine)" />
-                    <ellipse cx="0" cy="0" rx="30" ry="38" fill="url(#p-hatch)" />
-                  </g>
-                  <g stroke="#ffc71f" stroke-width="3" stroke-linecap="round">
-                    <path d="M360 230 v-6" />
-                    <path d="M349 233 l-3 -5" />
-                    <path d="M371 233 l3 -5" />
-                    <path d="M342 241 l-5 -3" />
-                    <path d="M378 241 l5 -3" />
-                  </g>
-                  <circle cx="360" cy="246" r="9" fill="#ffc71f" />
-                  <text
-                    x="360"
-                    y="284"
-                    text-anchor="middle"
-                    style="font-family: var(--font-display); font-weight: 800"
-                    font-size="30"
-                    fill="#1f8a3b"
-                  >
-                    Rasa Suria
-                  </text>
-                  <rect x="300" y="294" width="120" height="15" rx="7.5" fill="#1f8a3b" />
-                  <text
-                    x="360"
-                    y="305"
-                    text-anchor="middle"
-                    style="font-family: var(--font-sans); font-weight: 800"
-                    font-size="8"
-                    fill="#fff9e3"
-                  >
-                    MAKANAN PILIHAN MALAYSIA
-                  </text>
-                  <text
-                    x="360"
-                    y="352"
-                    text-anchor="middle"
-                    style="font-family: var(--font-display); font-weight: 800"
-                    font-size="42"
-                    fill="#1f8a3b"
-                  >
-                    Jus
-                  </text>
-                  <text
-                    x="360"
-                    y="400"
-                    text-anchor="middle"
-                    style="font-family: var(--font-display); font-weight: 800"
-                    font-size="54"
-                    fill="#f6921e"
-                  >
-                    Nanas
-                  </text>
-                  <text
-                    x="360"
-                    y="424"
-                    text-anchor="middle"
-                    style="font-family: var(--font-sans); font-weight: 800"
-                    font-size="12"
-                    letter-spacing="3"
-                    fill="#6b4a12"
-                  >
-                    PINEAPPLE JUICE
-                  </text>
-                </g>
-
-                <!-- whole pineapple, front right -->
-                <g transform="translate(536 468) scale(0.74) rotate(8)">
-                  <g fill="url(#g-leaf)">
-                    <path d="M0 -62 C-30 -95 -38 -140 -22 -176 C-8 -138 -4 -98 2 -64 Z" />
-                    <path d="M2 -64 C-8 -110 -2 -160 18 -190 C22 -148 16 -104 8 -62 Z" />
-                    <path
-                      d="M6 -60 C22 -92 48 -118 84 -128 C60 -96 34 -72 12 -56 Z"
-                      fill="#3aa848"
-                    />
-                    <path
-                      d="M-4 -60 C-22 -88 -50 -110 -84 -118 C-58 -92 -30 -68 -8 -54 Z"
-                      fill="#3aa848"
-                    />
-                    <path d="M0 -58 C6 -84 8 -116 2 -150 C-2 -116 -4 -84 -6 -58 Z" fill="#2e8b3a" />
-                  </g>
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#g-pine)" />
-                  <ellipse cx="0" cy="0" rx="80" ry="96" fill="url(#p-hatch)" />
-                  <ellipse cx="0" cy="-88" rx="14" ry="8" fill="#c97f22" opacity="0.5" />
-                </g>
-
-                <!-- cut pineapple half, front left -->
-                <g
-                  class="bob"
-                  style="animation-delay: 0.8s"
-                  transform="translate(235 545) rotate(-12)"
-                >
-                  <circle r="62" fill="#c9821e" />
-                  <circle r="62" fill="url(#p-hatch2)" />
-                  <circle r="48" fill="url(#g-flesh)" />
-                  <g stroke="#eed08a" stroke-width="3" opacity="0.8">
-                    <path d="M0 -46 L0 -12" />
-                    <path d="M0 12 L0 46" />
-                    <path d="M-46 0 L-12 0" />
-                    <path d="M12 0 L46 0" />
-                    <path d="M-33 -33 L-9 -9" />
-                    <path d="M9 9 L33 33" />
-                    <path d="M-33 33 L-9 9" />
-                    <path d="M9 -9 L33 -33" />
-                  </g>
-                  <ellipse cx="0" cy="0" rx="9" ry="13" fill="#f7d269" />
-                  <g fill="#b97a22">
-                    <circle cx="0" cy="-28" r="2.5" />
-                    <circle cx="21" cy="-16" r="2.5" />
-                    <circle cx="-21" cy="-16" r="2.5" />
-                    <circle cx="14" cy="24" r="2.5" />
-                    <circle cx="-14" cy="24" r="2.5" />
-                  </g>
-                </g>
-
-                <!-- mascot pineapple -->
-                <g class="rock" transform="translate(648 486) scale(1.05) rotate(-4)">
-                  <path d="M0 -42 C-4 -70 -2 -92 4 -108 C8 -86 6 -62 4 -42 Z" fill="#2e8b3a" />
-                  <path
-                    d="M-4 -40 C-16 -64 -20 -88 -14 -106 C-6 -84 -4 -60 0 -42 Z"
-                    fill="#4cbf57"
-                  />
-                  <path d="M6 -42 C14 -64 20 -84 28 -96 C24 -72 16 -52 10 -40 Z" fill="#4cbf57" />
-                  <path
-                    d="M-10 -38 C-24 -54 -34 -66 -46 -72 C-36 -56 -24 -42 -12 -34 Z"
-                    fill="#3aa848"
-                  />
-                  <path d="M12 -38 C24 -52 36 -62 46 -68 C38 -52 26 -40 14 -32 Z" fill="#3aa848" />
-                  <path
-                    d="M-30 -8 C-52 -18 -62 -34 -66 -52"
-                    fill="none"
-                    stroke="#7a4a12"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                  />
-                  <circle cx="-66" cy="-54" r="5" fill="#7a4a12" />
-                  <path
-                    d="M30 -6 C48 -12 60 -24 66 -40"
-                    fill="none"
-                    stroke="#7a4a12"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                  />
-                  <circle cx="67" cy="-42" r="5" fill="#7a4a12" />
-                  <path
-                    d="M-12 46 L-14 62 M12 46 L14 62"
-                    stroke="#7a4a12"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                  />
-                  <ellipse cx="-17" cy="66" rx="8" ry="5" fill="#6b3a10" />
-                  <ellipse cx="19" cy="66" rx="8" ry="5" fill="#6b3a10" />
-                  <ellipse cx="0" cy="0" rx="36" ry="48" fill="url(#g-pine)" />
-                  <ellipse cx="0" cy="0" rx="36" ry="48" fill="url(#p-hatch)" />
-                  <rect x="-30" y="-26" width="26" height="18" rx="7" fill="#1a1a1a" />
-                  <rect x="4" y="-26" width="26" height="18" rx="7" fill="#1a1a1a" />
-                  <path
-                    d="M-4 -19 L4 -19 M-30 -22 L-36 -24 M30 -22 L36 -24"
-                    stroke="#1a1a1a"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                  />
-                  <circle cx="-22" cy="-20" r="3" fill="#fff" opacity="0.5" />
-                  <circle cx="12" cy="-20" r="3" fill="#fff" opacity="0.5" />
-                  <ellipse cx="0" cy="12" rx="11" ry="8" fill="#7a2e1e" />
-                  <ellipse cx="0" cy="15" rx="6" ry="4" fill="#f26d5e" />
-                </g>
-              </svg>
-
-              <!-- LAYER text overlay: product stamps (HTML above the artwork — reposition or
-                   drop these freely when the PNG key-visual arrives; the two percentage anchors
-                   below are calibrated to the stand-in SVG's label — recalibrate left/top to the
-                   PNG's label position in the same swap) -->
-              <div
-                class="pointer-events-none absolute left-[55.8%] top-[71.5%] z-10 -translate-x-1/2 -translate-y-1/2"
-                aria-hidden="true"
-              >
-                <div
-                  class="grid h-[8.6cqw] w-[8.6cqw] place-items-center rounded-full bg-sun-green shadow-md shadow-sun-pine/30"
-                >
-                  <div
-                    class="grid h-[7cqw] w-[7cqw] place-items-center rounded-full border border-dashed border-sun-cream/80 text-center leading-none"
-                  >
-                    <div>
-                      <p class="font-display text-[2.1cqw] font-extrabold text-sun-cream">100%</p>
-                      <p
-                        class="mt-[0.3cqw] font-sans text-[1.05cqw] font-extrabold tracking-wide text-sun-cream"
-                      >
-                        BUAH NANAS
-                      </p>
-                      <p
-                        class="font-sans text-[1.05cqw] font-extrabold tracking-wide text-sun-cream"
-                      >
-                        SEMULA JADI
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p
-                class="pointer-events-none absolute left-[48.9%] top-[72.8%] z-10 -translate-x-1/2 -translate-y-1/2 font-sans text-[1.5cqw] font-extrabold text-[#6b4a12]"
-              >
-                500ml
-              </p>
-              <p
-                class="pointer-events-none absolute left-1/2 top-[84.5%] z-10 -translate-x-1/2 rounded-full bg-sun-cream/90 px-[1.6cqw] py-[0.5cqw] font-hand text-[max(2.6cqw,11px)] font-bold whitespace-nowrap text-sun-pine"
-                aria-hidden="true"
-              >
-                Tanpa Pengawet • Tanpa Perisa Tiruan
-              </p>
+              <!-- LAYER artwork: real product key-visual (public/featured_nanas.webp, 737x747
+                   webp with alpha). The SunLicious label, "100% BUAH NANAS" badge, 500ml mark,
+                   "Tanpa Pengawet" note and mascot are baked into the artwork, so the former
+                   HTML overlay stamps were dropped in this swap. -->
+              <img
+                src="/featured_nanas.webp"
+                alt="Botol Jus Nanas SunLicious 500ml dikelilingi buah nanas, percikan jus dan maskot nanas bergaya"
+                class="h-auto w-full"
+                width="737"
+                height="747"
+                loading="eager"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
