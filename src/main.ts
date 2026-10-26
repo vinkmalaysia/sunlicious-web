@@ -1,7 +1,10 @@
 import "./style.css";
+import { initParallax } from "./parallax";
 
 /* Mobile menu + desktop nav underline live in src/nav.ts (the shared topnav
    component renders that markup and wires its own behaviour). */
+
+initParallax();
 
 /* ---------- re-apply fragment anchor after load ----------
    The browser's initial fragment jump can be cancelled by the layout shifts

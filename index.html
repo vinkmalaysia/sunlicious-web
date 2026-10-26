@@ -120,7 +120,7 @@
     <header id="site-header"></header>
 
     <main id="home">
-      <section class="relative overflow-hidden" aria-labelledby="hero-title">
+      <section class="relative" aria-labelledby="hero-title">
         <!-- LAYER ground -->
         <div
           class="absolute inset-0"
@@ -233,6 +233,44 @@
             <circle cx="120" cy="92" r="8" fill="#c9dc3f" />
             <circle cx="92" cy="116" r="5" fill="#4cbf57" />
           </svg>
+        </div>
+
+        <!-- LAYER seam: continuous sun-ground color across section boundaries —
+             every boundary blends through the darkest ground tone (#e9d81c). -->
+        <div
+          class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#e9d81c] to-transparent"
+          aria-hidden="true"
+        ></div>
+
+        <!-- LAYER decor-parallax: raster props nudged by parallax.js (scenes are
+             initialised in src/parallax.ts; the scene's data-scalar-x/y set the
+             pointer-swing amplitude (~18% width / ~14% height) and each frame's
+             data-depth scales it (0.15–0.45, foreground props move more). Each
+             direct child is a full-bleed positioning frame because parallax.js
+             pins them at the scene's top-left and moves them via its own
+             transform. z-[5] keeps them above every z-auto section
+             ground/decor across section borders (props may drift over a seam),
+             yet below the z-10 copy and the z-40 header — so they never sit
+             over text or nav. The inner img's data-drift (0.12–0.28) is the
+             separate scroll-driven rise speed handled in src/parallax.ts. -->
+        <div
+          class="pointer-events-none absolute inset-0 z-[5]"
+          data-parallax-scene
+          data-hover-only="true"
+          data-scalar-x="18"
+          data-scalar-y="14"
+          aria-hidden="true"
+        >
+          <div data-depth="0.24" class="layer h-full w-full">
+            <img
+              class="absolute top-4 right-[2%] w-32 -rotate-[105deg] opacity-90 blur-[1.5px] sm:top-6 sm:w-52 lg:top-8 lg:w-72"
+              src="/layers-_0013_gpt-image-2.5-flare_create_webpage_decoration_elements_based_on_pineapple_fruit_juice_theme._natural-0-topa.png"
+              alt=""
+              data-drift="0.16"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
 
         <div
@@ -379,11 +417,33 @@
             </div>
           </div>
         </div>
+        <!-- LAYER decor-parallax-fg: the palm sits over the copy itself — same
+             rig as the scene above but layered above the z-10 grid (still
+             under the z-40 header; pointer-events-none keeps CTAs clickable). -->
+        <div
+          class="pointer-events-none absolute inset-0 z-20"
+          data-parallax-scene
+          data-hover-only="true"
+          data-scalar-x="18"
+          data-scalar-y="14"
+          aria-hidden="true"
+        >
+          <div data-depth="0.45" class="layer h-full w-full">
+            <img
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 w-32 -rotate-[8deg] opacity-95 sm:bottom-6 sm:w-44 lg:bottom-8 lg:w-56"
+              src="/layers-_0011_Layer-12.png"
+              alt=""
+              data-drift="0.28"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
       </section>
       <!-- SECTION produk: maklumat pemakanan (nutrition facts) -->
       <section
         id="produk"
-        class="relative overflow-hidden pb-28 pt-20 sm:pb-36 sm:pt-24"
+        class="relative pb-28 pt-20 sm:pb-36 sm:pt-24"
         aria-labelledby="produk-title"
       >
         <!-- LAYER ground -->
@@ -398,6 +458,12 @@
               #e9d81c 100%
             );
           "
+          aria-hidden="true"
+        ></div>
+
+        <!-- LAYER seam: see the hero ramp comment -->
+        <div
+          class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-[#e9d81c] to-transparent"
           aria-hidden="true"
         ></div>
 
@@ -420,6 +486,37 @@
           </svg>
           <span class="absolute left-[6%] top-[30%] h-3 w-3 rounded-full bg-sun-juice"></span>
           <span class="absolute right-[30%] top-[10%] h-2 w-2 rounded-full bg-sun-juice"></span>
+        </div>
+
+        <!-- LAYER decor-parallax: see the hero scene comment for how this works -->
+        <div
+          class="pointer-events-none absolute inset-0 z-[5]"
+          data-parallax-scene
+          data-hover-only="true"
+          data-scalar-x="18"
+          data-scalar-y="14"
+          aria-hidden="true"
+        >
+          <div data-depth="0.34" class="layer h-full w-full">
+            <img
+              class="absolute top-6 right-[4%] w-32 rotate-[16deg] opacity-95 sm:top-8 sm:w-40 lg:top-10 lg:right-[6%] lg:w-56"
+              src="/layers-_0009_Layer-10.png"
+              alt=""
+              data-drift="0.2"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div data-depth="0.2" class="layer h-full w-full">
+            <img
+              class="absolute bottom-8 right-[4%] w-24 -rotate-[16deg] opacity-90 sm:bottom-10 sm:right-[5%] sm:w-32 lg:bottom-12 lg:right-[6%] lg:w-40"
+              src="/layers-_0005_Layer-6.png"
+              alt=""
+              data-drift="0.14"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
@@ -691,14 +788,16 @@
             </div>
           </div>
         </div>
+
+        <!-- LAYER seam: see the hero ramp comment -->
+        <div
+          class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#e9d81c] to-transparent"
+          aria-hidden="true"
+        ></div>
       </section>
 
       <!-- SECTION tentang: sijil & kilang (Malaysian certifications, Johor factory) -->
-      <section
-        id="tentang"
-        class="relative overflow-hidden pb-44 pt-20 sm:pt-24"
-        aria-labelledby="tentang-title"
-      >
+      <section id="tentang" class="relative pb-44 pt-20 sm:pt-24" aria-labelledby="tentang-title">
         <!-- LAYER ground -->
         <div
           class="absolute inset-0"
@@ -711,6 +810,12 @@
               #e9d81c 100%
             );
           "
+          aria-hidden="true"
+        ></div>
+
+        <!-- LAYER seam: see the hero ramp comment -->
+        <div
+          class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-linear-to-b from-[#e9d81c] to-transparent"
           aria-hidden="true"
         ></div>
 
@@ -733,6 +838,37 @@
           </svg>
           <span class="absolute bottom-[14%] left-[12%] h-3 w-3 rounded-full bg-sun-juice"></span>
           <span class="absolute right-[26%] top-[42%] h-2 w-2 rounded-full bg-sun-juice"></span>
+        </div>
+
+        <!-- LAYER decor-parallax: see the hero scene comment for how this works -->
+        <div
+          class="pointer-events-none absolute inset-0 z-[5]"
+          data-parallax-scene
+          data-hover-only="true"
+          data-scalar-x="18"
+          data-scalar-y="14"
+          aria-hidden="true"
+        >
+          <div data-depth="0.15" class="layer h-full w-full">
+            <img
+              class="absolute top-[6%] right-[2%] w-32 rotate-[14deg] opacity-90 blur-[1px] sm:top-[7%] sm:w-48 lg:right-[3%] lg:w-64"
+              src="/layers-_0010_Layer-11.png"
+              alt=""
+              data-drift="0.12"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div data-depth="0.28" class="layer h-full w-full">
+            <img
+              class="absolute bottom-6 left-1/2 -translate-x-1/2 w-28 -rotate-[18deg] opacity-95 sm:bottom-8 sm:w-36 lg:bottom-10 lg:w-48"
+              src="/layers-_0000_Layer-1.png"
+              alt=""
+              data-drift="0.24"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
@@ -1200,7 +1336,7 @@
     </main>
 
     <!-- Footer is rendered by src/footer.ts into this slot -->
-    <footer id="site-footer"></footer>
+    <footer id="site-footer" class="relative z-10"></footer>
 
     <script type="module" src="/src/nav.ts"></script>
     <script type="module" src="/src/main.ts"></script>

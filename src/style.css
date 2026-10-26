@@ -134,6 +134,11 @@ html.js [data-reveal]:not(.rise):not(.pop) {
 html {
   scroll-behavior: smooth;
   scrollbar-color: var(--color-sun-leaf-deep) var(--color-sun-glow);
+  /* Horizontal-only clip: the sections stay unclipped vertically so the
+     parallax props can float over section seams, while anything poking past
+     the viewport edge (overhanging decor at negative offsets) still can't
+     pan the page sideways. */
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
